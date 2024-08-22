@@ -5,6 +5,7 @@
 #define SS_INF_ROOTS -1  //research
 #define myMIN(a, b) (a) < (b) ? (1) : (0)
 
+
 typedef struct {
     double a;
     double b;
