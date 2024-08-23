@@ -12,7 +12,6 @@ static void printSolutions(const int* numberOfSol, progAnsw* progAnswer);
 static void clearInput();
 static void getCoeff(const char* message, double* k);
 
-// ������� ���������� ���������
 void releaseFunc() {
 	int numberOfSol = 0;
 	equ equation;
@@ -24,9 +23,9 @@ void releaseFunc() {
 }
 
 static void getInput(equ* equation) {
-    getCoeff("������� ����������� ��� x^2: ",   &equation->a);
-    getCoeff("������� ����������� ��� x: ",     &equation->b);
-    getCoeff("������� ��������� �����������: ", &equation->c);
+    getCoeff("Enter the coefficient at x^2: ",   &equation->a);
+    getCoeff("Enter the coefficient at x: ",     &equation->b);
+    getCoeff("Enter free coefficient: ", &equation->c);
 }
 
 static void getCoeff(const char* message, double* k){
@@ -54,16 +53,16 @@ static void printSolutions(const int* numberOfSol, progAnsw* progAnswer) {
     double*x2 = &progAnswer->x2;
 	switch (*numberOfSol) {
 	case 0:
-		printf("������� ���!");
+		printf("There are no roots!");
 		break;
 	case 1:
-		printf("���� ������� %lg\n", *x1);
+		printf("One root %lg\n", *x1);
 		break;
 	case 2:
 		printf("Solution #1:%lg\nSolution #2:%lg\n", *x1, *x2);
 		break;
 	case SS_INF_ROOTS:
-		printf("����������� ���-�� �������!");
+		printf("Infinite number of solutions!");
 		break;
     default:
         break;
