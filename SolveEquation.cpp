@@ -12,7 +12,8 @@ int SolveEquation(equ* equation, progAnsw* progAnswer) {
 	assert(isfinite(equation->b) && "Incorrect b");
 	assert(isfinite(equation->c) && "Incorrect c");
 
-	double D = equation->b * equation->b - 4 * equation->a * equation->c; // Ã„Ã¨Ã±ÃªÃ°Ã¨Ã¬Ã¨Ã­Ã Ã­Ã²
+	double D = equation->b * equation->b - 4 * equation->a * equation->c; // Äèñêðèìèíàíò
+
     //printf("%lg\n", D);
 	if (fabs(equation->a) > compareZero) // is zero func
         return notLinearEquation(&D, equation, progAnswer);

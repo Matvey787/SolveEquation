@@ -76,19 +76,17 @@ void mySwap(void* a, void* b, size_t elemMemory){
     long* b_long = (long*)b;
 
 
-    while (summ < elemMemory){
+    while (summ < elemMemory - sizeof(long)){
     //printf("%d", elemMemory - summ);
-        if (sizeof(long) < (elemMemory - summ)) {
 
-            long buf = *a_long;
-            *a_long = *b_long;
-            *b_long = buf;
+        long buf = *a_long;
+        *a_long = *b_long;
+        *b_long = buf;
 
-            a_long += 1;
-            b_long += 1;
-            summ += sizeof(long);
+        a_long += 1;
+        b_long += 1;
+        summ += sizeof(long);
 
-        } else { break; }
     }
     //printf("ok");
     int* a_int = (int*)a_long;
