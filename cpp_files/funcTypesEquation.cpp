@@ -1,9 +1,9 @@
-#include "funcTypesEquation.h"
+#include "..\headers\funcTypesEquation.h"
 
 #include <math.h>
 
-#include "structures.h"
-#include "constants.h"
+#include "..\headers\structures.h"
+#include "..\headers\constants.h"
 
 int notLinearEquation(const double* D, const equ* equation, progAnsw* progAnswer){
     const double a = equation->a;

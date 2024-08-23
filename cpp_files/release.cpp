@@ -1,18 +1,18 @@
 #include <TXLib.h>
 #include <stdio.h>
 
-#include "release.h"
+#include "..\headers\release.h"
 
-#include "constants.h"
-#include "structures.h"
-#include "SolveEquation.h"
+#include "..\headers\constants.h"
+#include "..\headers\structures.h"
+#include "..\headers\SolveEquation.h"
 
 static void getInput(equ* equation);
 static void printSolutions(const int* numberOfSol, progAnsw* progAnswer);
 static void clearInput();
 static void getCoeff(const char* message, double* k);
 
-// Решение квадратных уравнений
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 void releaseFunc() {
 	int numberOfSol = 0;
 	equ equation;
@@ -24,9 +24,9 @@ void releaseFunc() {
 }
 
 static void getInput(equ* equation) {
-    getCoeff("Введите коэффициент при x^2: ",   &equation->a);
-    getCoeff("Введите коэффициент при x: ",     &equation->b);
-    getCoeff("Введите свободный коэффициент: ", &equation->c);
+    getCoeff("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ x^2: ",   &equation->a);
+    getCoeff("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ x: ",     &equation->b);
+    getCoeff("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ", &equation->c);
 }
 
 static void getCoeff(const char* message, double* k){
@@ -54,16 +54,16 @@ static void printSolutions(const int* numberOfSol, progAnsw* progAnswer) {
     double*x2 = &progAnswer->x2;
 	switch (*numberOfSol) {
 	case 0:
-		printf("Решений нет!");
+		printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ!");
 		break;
 	case 1:
-		printf("Одно решение %lg\n", *x1);
+		printf("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ %lg\n", *x1);
 		break;
 	case 2:
 		printf("Solution #1:%lg\nSolution #2:%lg\n", *x1, *x2);
 		break;
 	case SS_INF_ROOTS:
-		printf("Бесконечное кол-во решений!");
+		printf("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");
 		break;
     default:
         break;

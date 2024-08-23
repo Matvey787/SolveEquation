@@ -1,11 +1,11 @@
 #include <TXLib.h>
 #include <stdio.h>
 
-#include "debug.h"
-#include "constants.h"
-#include "structures.h"
-#include "SolveEquation.h"
-#include "tests.h"
+#include "..\headers\debug.h"
+#include "..\headers\constants.h"
+#include "..\headers\structures.h"
+#include "..\headers\SolveEquation.h"
+#include "..\headers\tests.h"
 #define myMIN(a, b) (a) < (b) ? (1) : (0)
 
 static void needToSwap(double* x1, double* x2);
@@ -76,7 +76,7 @@ void mySwap(void* a, void* b, size_t elemMemory){
     long* b_long = (long*)b;
 
 
-    while (summ < elemMemory - sizeof(long)){
+    while (summ + sizeof(long) <= elemMemory){
     //printf("%d", elemMemory - summ);
 
         long buf = *a_long;
@@ -92,7 +92,7 @@ void mySwap(void* a, void* b, size_t elemMemory){
     int* a_int = (int*)a_long;
     int* b_int = (int*)b_long;
 
-    if (sizeof(int) < elemMemory - summ){
+    if (summ + sizeof(int) <= elemMemory){
 
         int buf = *a_int;
         *a_int = *b_int;
@@ -107,7 +107,7 @@ void mySwap(void* a, void* b, size_t elemMemory){
     short* a_short = (short*)a_int;
     short* b_short = (short*)b_int;
 
-    if (sizeof(short) < elemMemory - summ){
+    if (summ + sizeof(short) <= elemMemory){
 
         short buf = *a_short;
         *a_short = *b_short;
@@ -122,7 +122,7 @@ void mySwap(void* a, void* b, size_t elemMemory){
     char* a_char = (char*)a_short;
     char* b_char = (char*)b_short;
 
-    if (sizeof(short) < elemMemory - summ){
+    if (summ + sizeof(short) <= elemMemory){
 
         char buf = *a_char;
         *a_char = *b_char;
