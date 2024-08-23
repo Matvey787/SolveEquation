@@ -9,8 +9,7 @@ int main(int argc, char *argv[]){
 
     if (strcmp(argv[argc-1], "debug") == 0)
         debugFunc();
-    else
+    else if (strcmp(argv[argc-1], "release") == 0)
         releaseFunc();
-
     return 0;
 }
