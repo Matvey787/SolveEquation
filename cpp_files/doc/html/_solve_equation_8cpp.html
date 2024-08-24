@@ -99,6 +99,7 @@ $(function(){ initResizable(false); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aa497bc0c3a2b2169a829f3163f09b328" id="r_aa497bc0c3a2b2169a829f3163f09b328"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa497bc0c3a2b2169a829f3163f09b328">SolveEquation</a> (equ *equation, progAnsw *progAnswer)</td></tr>
+<tr class="memdesc:aa497bc0c3a2b2169a829f3163f09b328"><td class="mdescLeft">&#160;</td><td class="mdescRight">main call function  <br /></td></tr>
 <tr class="separator:aa497bc0c3a2b2169a829f3163f09b328"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -120,6 +121,32 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>main call function </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">equation</td><td>- struct in which the coefficients of equation are stored </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">progAnswer</td><td>- struct in which answers are stored </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>return amount of solutions <div class="fragment"><div class="line">assert(equation != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;equation is point to null&quot;</span>);</div>
+<div class="line">assert(isfinite(equation-&gt;a) &amp;&amp; <span class="stringliteral">&quot;Incorrect a&quot;</span>);</div>
+<div class="line">assert(isfinite(equation-&gt;b) &amp;&amp; <span class="stringliteral">&quot;Incorrect b&quot;</span>);</div>
+<div class="line">assert(isfinite(equation-&gt;c) &amp;&amp; <span class="stringliteral">&quot;Incorrect c&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">double</span> D = equation-&gt;b * equation-&gt;b - 4 * equation-&gt;a * equation-&gt;c;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">//printf(&quot;%lg\n&quot;, D);</span></div>
+<div class="line"><span class="keywordflow">if</span> (fabs(equation-&gt;a) &gt; compareZero) <span class="comment">// is zero func</span></div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="func_types_equation_8cpp.html#a3df4633cc63625d0536274e624f3e6bf">notLinearEquation</a>(&amp;D, equation, progAnswer);</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="func_types_equation_8cpp.html#a14cea80dcf4f8a89c45884b2b9b45539">isLinearEquation</a>(equation, progAnswer);</div>
+<div class="line">}</div>
+<div class="ttc" id="afunc_types_equation_8cpp_html_a14cea80dcf4f8a89c45884b2b9b45539"><div class="ttname"><a href="func_types_equation_8cpp.html#a14cea80dcf4f8a89c45884b2b9b45539">isLinearEquation</a></div><div class="ttdeci">int isLinearEquation(const equ *equation, progAnsw *progAnswer)</div><div class="ttdoc">same as not linear func but work with if coefficient before x^2 = 0</div><div class="ttdef"><b>Definition</b> funcTypesEquation.cpp:90</div></div>
+<div class="ttc" id="afunc_types_equation_8cpp_html_a3df4633cc63625d0536274e624f3e6bf"><div class="ttname"><a href="func_types_equation_8cpp.html#a3df4633cc63625d0536274e624f3e6bf">notLinearEquation</a></div><div class="ttdeci">int notLinearEquation(const double *D, const equ *equation, progAnsw *progAnswer)</div><div class="ttdoc">function which swap two numbers</div><div class="ttdef"><b>Definition</b> funcTypesEquation.cpp:42</div></div>
+</div><!-- fragment --> </dd></dl>
 
 </div>
 </div>
