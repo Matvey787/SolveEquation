@@ -30,7 +30,9 @@ void mySwap(void* a, void* b, size_t elemMemory);
         }
      \endcode
 */
-
+/*! equations [type test] - <b>array of different test structures</b> */
+/*! progAnswer [type progAnsw] - <b>struct to save prog answers</b> */
+/*! testedEquation [type test] - <b>current struct of test</b> */
 void debugFunc(){
 
     for (unsigned int i = 0; i < sizeof(equations)/sizeof(*equations); i++)
@@ -85,7 +87,9 @@ void debugFunc(){
         return 0;
      \endcode
 */
-
+/*! equations [type test] - <b>array of different test structures</b> */
+/*! progAnswer [type progAnsw] - <b>struct to save prog answers</b> */
+/*! testedEquation [type test] - <b>current struct of test</b> */
 static int isCorrectAns(double* x1, double* x2, const int numberOfRoots, const test* testedEquation, int numberOfTest){
     printf("Test \033[43m\033[30m#%d\033[0m ", numberOfTest);
 
@@ -146,6 +150,7 @@ static void needToSwap(double* x1, double* x2){
 
 /**
     \brief function which swap two numbers
+    The function operates on variables using pointer arithmetic.
     \param [in] a - first number
     \param [in] b - second number
     \param [in] elemMemory - how many memory need for *a or *b (in bytes)
