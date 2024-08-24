@@ -99,14 +99,18 @@ $(function(){ initResizable(false); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a84dfec17e5c470d240be038c2a6c5c97" id="r_a84dfec17e5c470d240be038c2a6c5c97"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84dfec17e5c470d240be038c2a6c5c97">getInput</a> (equ *equation)</td></tr>
+<tr class="memdesc:a84dfec17e5c470d240be038c2a6c5c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">func which gets data from user  <br /></td></tr>
 <tr class="separator:a84dfec17e5c470d240be038c2a6c5c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4434accca83c4b6afe93b1bf26cd902" id="r_ac4434accca83c4b6afe93b1bf26cd902"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4434accca83c4b6afe93b1bf26cd902">printSolutions</a> (const int *numberOfSol, progAnsw *progAnswer)</td></tr>
+<tr class="memdesc:ac4434accca83c4b6afe93b1bf26cd902"><td class="mdescLeft">&#160;</td><td class="mdescRight">print answers in special format  <br /></td></tr>
 <tr class="separator:ac4434accca83c4b6afe93b1bf26cd902"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4fa4af9bbcdf25e719917d23bc3a8e3" id="r_ab4fa4af9bbcdf25e719917d23bc3a8e3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4fa4af9bbcdf25e719917d23bc3a8e3">clearInput</a> ()</td></tr>
+<tr class="memdesc:ab4fa4af9bbcdf25e719917d23bc3a8e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">if scanf() failed to read information, then this function is executed  <br /></td></tr>
 <tr class="separator:ab4fa4af9bbcdf25e719917d23bc3a8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ed030911c5fbc3b5fa3408c568f9fc9" id="r_a4ed030911c5fbc3b5fa3408c568f9fc9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ed030911c5fbc3b5fa3408c568f9fc9">getCoeff</a> (const char *message, double *k)</td></tr>
 <tr class="separator:a4ed030911c5fbc3b5fa3408c568f9fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b7c3517ba951156c025c2e3d3b31538" id="r_a1b7c3517ba951156c025c2e3d3b31538"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b7c3517ba951156c025c2e3d3b31538">releaseFunc</a> ()</td></tr>
+<tr class="memdesc:a1b7c3517ba951156c025c2e3d3b31538"><td class="mdescLeft">&#160;</td><td class="mdescRight">func which is designed to work with user  <br /></td></tr>
 <tr class="separator:a1b7c3517ba951156c025c2e3d3b31538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -133,6 +137,16 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>if scanf() failed to read information, then this function is executed </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">doesn't</td><td>get any parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>nothing</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordflow">while</span> (getchar() != <span class="charliteral">&#39;\n&#39;</span>);</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a4ed030911c5fbc3b5fa3408c568f9fc9" name="a4ed030911c5fbc3b5fa3408c568f9fc9"></a>
@@ -187,6 +201,19 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>func which gets data from user </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">equation</td><td>- struct to store equation data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>nothing</dd></dl>
+<div class="fragment"><div class="line"><a class="code hl_function" href="#a4ed030911c5fbc3b5fa3408c568f9fc9">getCoeff</a>(<span class="stringliteral">&quot;Enter the coefficient at x^2: &quot;</span>,   &amp;equation-&gt;a);</div>
+<div class="line"><a class="code hl_function" href="#a4ed030911c5fbc3b5fa3408c568f9fc9">getCoeff</a>(<span class="stringliteral">&quot;Enter the coefficient at x: &quot;</span>,     &amp;equation-&gt;b);</div>
+<div class="line"><a class="code hl_function" href="#a4ed030911c5fbc3b5fa3408c568f9fc9">getCoeff</a>(<span class="stringliteral">&quot;Enter free coefficient: &quot;</span>, &amp;equation-&gt;c);</div>
+<div class="ttc" id="arelease_8cpp_html_a4ed030911c5fbc3b5fa3408c568f9fc9"><div class="ttname"><a href="#a4ed030911c5fbc3b5fa3408c568f9fc9">getCoeff</a></div><div class="ttdeci">static void getCoeff(const char *message, double *k)</div><div class="ttdef"><b>Definition</b> release.cpp:59</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ac4434accca83c4b6afe93b1bf26cd902" name="ac4434accca83c4b6afe93b1bf26cd902"></a>
@@ -216,6 +243,34 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>print answers in special format </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">numberOfSol</td><td>- amount of solutions </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">progAnswer</td><td>- struct to store program answers datas </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>nothing</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">double</span>*x1 = &amp;progAnswer-&gt;x1;</div>
+<div class="line"><span class="keywordtype">double</span>*x2 = &amp;progAnswer-&gt;x2;</div>
+<div class="line"><span class="keywordflow">switch</span> (*numberOfSol) {</div>
+<div class="line"><span class="keywordflow">case</span> 0:</div>
+<div class="line">    printf(<span class="stringliteral">&quot;There are no roots!&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="keywordflow">case</span> 1:</div>
+<div class="line">    printf(<span class="stringliteral">&quot;One root %lg\n&quot;</span>, *x1);</div>
+<div class="line">    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="keywordflow">case</span> 2:</div>
+<div class="line">    printf(<span class="stringliteral">&quot;Solution #1:%lg\nSolution #2:%lg\n&quot;</span>, *x1, *x2);</div>
+<div class="line">    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="keywordflow">case</span> SS_INF_ROOTS:</div>
+<div class="line">    printf(<span class="stringliteral">&quot;Infinite number of solutions!&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="keywordflow">default</span>:</div>
+<div class="line">    <span class="keywordflow">break</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a1b7c3517ba951156c025c2e3d3b31538" name="a1b7c3517ba951156c025c2e3d3b31538"></a>
@@ -233,6 +288,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>func which is designed to work with user </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">doesn't</td><td>get any parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>nothing</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> numberOfSol = 0;</div>
+<div class="line">equ equation;</div>
+<div class="line"><a class="code hl_function" href="#a84dfec17e5c470d240be038c2a6c5c97">getInput</a>(&amp;equation);</div>
+<div class="line"> </div>
+<div class="line">progAnsw progAnswer = {0, 0, 0};</div>
+<div class="line">numberOfSol = <a class="code hl_function" href="_solve_equation_8cpp.html#aa497bc0c3a2b2169a829f3163f09b328">SolveEquation</a>(&amp;equation, &amp;progAnswer);</div>
+<div class="line"><a class="code hl_function" href="#ac4434accca83c4b6afe93b1bf26cd902">printSolutions</a>(&amp;numberOfSol, &amp;progAnswer);</div>
+<div class="ttc" id="a_solve_equation_8cpp_html_aa497bc0c3a2b2169a829f3163f09b328"><div class="ttname"><a href="_solve_equation_8cpp.html#aa497bc0c3a2b2169a829f3163f09b328">SolveEquation</a></div><div class="ttdeci">int SolveEquation(equ *equation, progAnsw *progAnswer)</div><div class="ttdoc">main call function</div><div class="ttdef"><b>Definition</b> SolveEquation.cpp:32</div></div>
+<div class="ttc" id="arelease_8cpp_html_a84dfec17e5c470d240be038c2a6c5c97"><div class="ttname"><a href="#a84dfec17e5c470d240be038c2a6c5c97">getInput</a></div><div class="ttdeci">static void getInput(equ *equation)</div><div class="ttdoc">func which gets data from user</div><div class="ttdef"><b>Definition</b> release.cpp:53</div></div>
+<div class="ttc" id="arelease_8cpp_html_ac4434accca83c4b6afe93b1bf26cd902"><div class="ttname"><a href="#ac4434accca83c4b6afe93b1bf26cd902">printSolutions</a></div><div class="ttdeci">static void printSolutions(const int *numberOfSol, progAnsw *progAnswer)</div><div class="ttdoc">print answers in special format</div><div class="ttdef"><b>Definition</b> release.cpp:117</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->
