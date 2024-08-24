@@ -27,7 +27,9 @@ static void getCoeff(const char* message, double* k);
 	printSolutions(&numberOfSol, &progAnswer);
     \endcode
 */
-
+/*! numberOfSol [type int] - get number of solutions from SolveEquation */
+/*! equation [type equ <b>--watch structures.h--</b>] - new structure with coefficients */
+/*! progAnswer [type progAnsw <b>--watch structures.h--</b>] - new structure with roots from programm */
 void releaseFunc() {
 	int numberOfSol = 0;
 	equ equation;
@@ -56,6 +58,30 @@ static void getInput(equ* equation) {
     getCoeff("Enter free coefficient: ", &equation->c);
 }
 
+/**
+    \brief func which gets data from user (just continue of getInput...)
+    \param [in] message - special message for user
+	\param [in] k - current coef (befor x^2, x or just free)
+    \return nothing
+
+    \code
+        int c=0;
+    int maxAttempts = 2;
+	while (printf("%s", message) && ((c = fscanf(stdin, "%lg", k)) != 1) && (c != EOF) && maxAttempts >= 1){
+		clearInput();
+		--maxAttempts;
+		}
+    if (maxAttempts == 0)
+        {
+        printf("Sorry, you have already used all attempts!");
+        exit(1);
+        }
+	clearInput();
+    \endcode
+*/
+
+/*! maxAttempts [type int] - max number of attempts (<b> ! counter goes to zero, so 2 attampts is 3 attempts ! </b>) */
+
 static void getCoeff(const char* message, double* k){
     int c=0;
     int maxAttempts = 2;
@@ -63,7 +89,6 @@ static void getCoeff(const char* message, double* k){
 		clearInput();
 		--maxAttempts;
 		}
-    // printf("%d\n", maxAttempts);
     if (maxAttempts == 0)
         {
         printf("Sorry, you have already used all attempts!");
