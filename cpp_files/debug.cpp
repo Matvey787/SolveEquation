@@ -287,8 +287,6 @@ void mySwap(void* a, void* b, size_t elemMemory){
         summ += sizeof(uint8_t);
 
     }
-
-
 }
 
 void swap2(double* x1, double* x2) {
