@@ -227,64 +227,64 @@ static void needToSwap(double* x1, double* x2){
 void mySwap(void* a, void* b, size_t elemMemory){
     size_t summ = 0;
 
-    long* a_long = (long*)a;
-    long* b_long = (long*)b;
+    uint64_t* a_long = (uint64_t*)a;
+    uint64_t* b_long = (uint64_t*)b;
 
 
-    while (summ + sizeof(long) <= elemMemory){
+    while (summ + sizeof(uint64_t) <= elemMemory){
 
-        long buf = *a_long;
+        uint64_t buf = *a_long;
         *a_long = *b_long;
         *b_long = buf;
 
         a_long += 1;
         b_long += 1;
-        summ += sizeof(long);
+        summ += sizeof(uint64_t);
 
     }
 
-    int* a_int = (int*)a_long;
-    int* b_int = (int*)b_long;
+    uint32_t* a_int = (uint32_t*)a_long;
+    uint32_t* b_int = (uint32_t*)b_long;
 
-    if (summ + sizeof(int) <= elemMemory){
+    if (summ + sizeof(uint32_t) <= elemMemory){
 
-        int buf = *a_int;
+        uint32_t buf = *a_int;
         *a_int = *b_int;
         *b_int = buf;
 
         a_int += 1;
         b_int += 1;
-        summ += sizeof(int);
+        summ += sizeof(uint32_t);
 
     }
 
-    short* a_short = (short*)a_int;
-    short* b_short = (short*)b_int;
+    uint16_t* a_short = (uint16_t*)a_int;
+    uint16_t* b_short = (uint16_t*)b_int;
 
-    if (summ + sizeof(short) <= elemMemory){
+    if (summ + sizeof(uint16_t) <= elemMemory){
 
-        short buf = *a_short;
+        uint16_t buf = *a_short;
         *a_short = *b_short;
         *b_short = buf;
 
         a_short += 1;
         b_short += 1;
-        summ += sizeof(short);
+        summ += sizeof(uint16_t);
 
     }
 
-    char* a_char = (char*)a_short;
-    char* b_char = (char*)b_short;
+    uint8_t* a_char = (uint8_t*)a_short;
+    uint8_t* b_char = (uint8_t*)b_short;
 
-    if (summ + sizeof(short) <= elemMemory){
+    if (summ + sizeof(uint8_t) <= elemMemory){
 
-        char buf = *a_char;
+        uint8_t buf = *a_char;
         *a_char = *b_char;
         *b_char = buf;
 
         a_char += 1;
         b_char += 1;
-        summ += sizeof(char);
+        summ += sizeof(uint8_t);
 
     }
 
