@@ -9,6 +9,46 @@
 #include "..\headers\tests.h"
 #define myMIN(a, b) (a) < (b) ? (1) : (0)
 
+/**
+    \brief function which swaps two numbers
+    \param [out] x1 - first number
+    \param [out] x2 - second number
+    \return nothing
+
+    \warning use macro myMIN(a, b)
+*/
+
+static void needToSwap(double* x1, double* x2);
+
+/**
+    \brief function which swap two numbers (vectorized)
+    The function operates on variables using pointer arithmetic.
+    \param [out] a - first number
+    \param [out] b - second number
+    \param [in] elemMemory - how many memory need for *a or *b (in bytes)
+    \return nothing
+
+    \warning size of a must be equal to size b
+*/
+
+static void mySwap(void* a, void* b, size_t elemMemory);
+
+/**
+    \brief <b>Function which tests programm.</b>
+
+    \details Function firstly check if programm number of roots is equal to correct number of
+    roots. Then it checks if roots correct of both sides.
+
+    \param [in] progAnswer - struct in which data of prog answers stored
+    \param [in] testedEquation - struct of corect answers
+    \param [in] numberOfTest - number of test
+
+    \return 1 - if test is corrected 0 - otherwise
+
+*/
+
+static int isCorrectAns(progAnsw* progAnswer, test* testedEquation, int numberOfTest);
+
 void debugFunc(){
     for (unsigned int i = 0; i < EQUATIONS_SIZE; i++)
     {
@@ -16,16 +56,21 @@ void debugFunc(){
 
         test testedEquation = EQUATIONS[i]; // get struct test from array of test structs
 
+        progAnswer.numberOfRoots = SolveEquation(&(testedEquation.equation), &progAnswer);
 
-        isCorrectAns(&progAnswer.x1, &progAnswer.x2, SolveEquation(&(testedEquation.equation), &progAnswer), &testedEquation, i+1);
+        isCorrectAns(&progAnswer, &testedEquation, i+1);
 
     }
 }
 
 
 
-static int isCorrectAns(double* x1, double* x2, const int numberOfRoots, const test* testedEquation, int numberOfTest){
+static int isCorrectAns(progAnsw* progAnswer, test* testedEquation, int numberOfTest){
     printf("Test %s#%d\033[0m ", RED, numberOfTest);
+
+    double* x1 = &(progAnswer->x1);
+    double* x2 = &(progAnswer->x2);
+    const int numberOfRoots = progAnswer->numberOfRoots;
 
     corrAnsw correctAnswers = testedEquation->corrAns;
     double x1Corr = correctAnswers.x1Corr;
@@ -64,7 +109,7 @@ static void needToSwap(double* x1, double* x2){
     return;
 }
 
-void mySwap(void* a, void* b, size_t elemMemory){
+static void mySwap(void* a, void* b, size_t elemMemory){
     size_t summ = 0;
 
     uint64_t* a_long = (uint64_t*)a;
