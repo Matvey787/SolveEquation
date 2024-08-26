@@ -4,19 +4,13 @@
 /**
     \brief function which tests programm
 
-    \param nothing get
-
     \return nothing
-
-    equations [type test] - <b>array of different test structures</b><br>
-    progAnswer [type progAnsw] - <b>struct to save prog answers</b><br>
-    testedEquation [type test] - <b>current struct of test</b>
 */
 
 void debugFunc();
 
 /**
-    \brief function which swap two numbers
+    \brief function which swaps two numbers
     \param [out] x1 - first number
     \param [out] x2 - second number
     \return nothing
@@ -40,25 +34,19 @@ static void needToSwap(double* x1, double* x2);
 
     \return 1 - if test is corrected 0 - otherwise
 
-    x1Corr [type double] - <b>first correct answer</b><br>
-    x2Corr [type double] - <b>second correct answer</b>
-
 */
-
+// TODO struct
 static int isCorrectAns(double* x1, double* x2, const int numberOfRoots, const test* testedEquation, int numberOfTest);
 
 /**
-    \brief function which swap two numbers
+    \brief function which swap two numbers (vectorized)
     The function operates on variables using pointer arithmetic.
     \param [out] a - first number
     \param [out] b - second number
     \param [in] elemMemory - how many memory need for *a or *b (in bytes)
     \return nothing
 
-    \warning
-        size of a must be equal to size b
-
-    summ [type size_t] - sum of bytes changed
+    \warning size of a must be equal to size b
 */
 
 void mySwap(void* a, void* b, const size_t elemMemory);

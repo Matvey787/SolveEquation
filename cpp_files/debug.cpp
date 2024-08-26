@@ -10,11 +10,11 @@
 #define myMIN(a, b) (a) < (b) ? (1) : (0)
 
 void debugFunc(){
-    for (unsigned int i = 0; i < sizeof(equations)/sizeof(*equations); i++)
+    for (unsigned int i = 0; i < EQUATIONS_SIZE; i++)
     {
         progAnsw progAnswer = {0, 0, 0};
 
-        test testedEquation = equations[i]; // get struct test from array of test structs
+        test testedEquation = EQUATIONS[i]; // get struct test from array of test structs
 
 
         isCorrectAns(&progAnswer.x1, &progAnswer.x2, SolveEquation(&(testedEquation.equation), &progAnswer), &testedEquation, i+1);

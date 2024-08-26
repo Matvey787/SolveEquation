@@ -6,9 +6,6 @@
     \param [in] equation - struct in which the coefficients of equation are stored
     \param [out] progAnswer - struct in which answers are stored
     \return return amount of solutions
-
-	D [type double] - discriminant of equation
-
 */
 
 int SolveEquation(const equ* equation, progAnsw* progAnswer);

@@ -1,8 +1,8 @@
 #ifndef STRUCTURES_H_INCLUDED
 #define STRUCTURES_H_INCLUDED
 
-/// @brief structure which keeps coefficients of quad equation
-typedef struct {
+/// @brief keeps coefficients of quad equation
+struct equ {
 
     /// @brief coeff before x^2
     double a;
@@ -12,10 +12,10 @@ typedef struct {
 
     /// @brief free coeff
     double c;
-} equ;
+};
 
-/// @brief structure which keeps programm answers
-typedef struct {
+/// @brief keeps programm answers
+struct progAnsw {
     /// @brief first prog answer
     double x1;
 
@@ -25,10 +25,10 @@ typedef struct {
     /// @brief programm number of roots
     int numberOfRoots;
 
-} progAnsw;
+};
 
 /// @brief structure which keeps correct answers for tests
-typedef struct {
+struct corrAnsw {
     /// @brief first correct answer
     double x1Corr;
 
@@ -38,10 +38,10 @@ typedef struct {
     /// @brief number of correct answers
     int numberOfRootsCorr;
 
-} corrAnsw;
+};
 
 /// @brief structure which keeps different tests
-typedef struct {
+struct test {
 
     /// @brief struct of coefficients in equation
     equ equation;
@@ -49,5 +49,5 @@ typedef struct {
     /// @brief struct of correct answers
     corrAnsw corrAns;
 
-} test;
+};
 #endif // CONSTANTS_H_INCLUDED

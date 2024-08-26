@@ -5,20 +5,6 @@
     \brief func which is designed to work with user
     \param doesn't get any parameters
     \return nothing
-
-    numberOfSol [type size_t] - amount of solutions<br>
-    equation [type equ] - struct keeps equation coefficients<br>
-    progAnswer [type progAnsw] - struct keeps programm answers
-
-    \code
-    int numberOfSol = 0;
-	equ equation;
-	getInput(&equation);
-
-    progAnsw progAnswer = {0, 0, 0};
-	numberOfSol = SolveEquation(&equation, &progAnswer);
-	printSolutions(&numberOfSol, &progAnswer);
-    \endcode
 */
 
 void releaseFunc();
@@ -46,17 +32,14 @@ static void printSolutions(const int* numberOfSol,const progAnsw* progAnswer);
     \return nothing
 
 */
-
+// TODO static
 static void clearInput();
 
 /**
-    \brief func which gets data from user (just continue of getInput...)
+    \brief func which gets data from user (used in getInput())
     \param [in] message - special message for user
 	\param [out] k - current coef (befor x^2, x or just free)
     \return nothing
-
-    c [type int] - get return from scanf<br>
-    maxAttempts [type int] - max attempts for user to input info
 
     \warning !!! Example: if maxAttempts = 2 it means that user have <b>3</b> attempts !!!
 */

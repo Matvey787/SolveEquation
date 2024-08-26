@@ -11,10 +11,16 @@ To see documentation:
 
 Programs that I used during the implementation of the solution of the quadratic equation.
 
-* <a href = "https://code.visualstudio.com/">
+<a href = "https://code.visualstudio.com/">
     <img src = "vscode_logo.jpg" width = "50" height = "50"/>
-  </a>
-* [![React][DOXYGEN GUI]][https://www.doxygen.nl/manual/doxywizard_usage.html]
-* [![Vue][CODE BLOCKS]][https://www.codeblocks.org/]
+</a>
+<a href = "https://www.doxygen.nl/manual/doxywizard_usage.html">
+    <img src = "vscode_logo.jpg" width = "50" height = "50"/>
+</a>
+<a href = "https://www.codeblocks.org/">
+    <img src = "vscode_logo.jpg" width = "50" height = "50"/>
+</a>
+* [![React][DOXYGEN GUI]][]
+* [![Vue][CODE BLOCKS]][]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
