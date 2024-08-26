@@ -101,6 +101,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a13163737259b9a3e87a41b399cc7b6bc" id="r_a13163737259b9a3e87a41b399cc7b6bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13163737259b9a3e87a41b399cc7b6bc">debugFunc</a> ()</td></tr>
 <tr class="memdesc:a13163737259b9a3e87a41b399cc7b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">function which tests programm  <br /></td></tr>
 <tr class="separator:a13163737259b9a3e87a41b399cc7b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ccb28be5ece08ca072a905faccbf9cb" id="r_a0ccb28be5ece08ca072a905faccbf9cb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ccb28be5ece08ca072a905faccbf9cb">needToSwap</a> (double *x1, double *x2)</td></tr>
+<tr class="memdesc:a0ccb28be5ece08ca072a905faccbf9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">function which swap two numbers  <br /></td></tr>
+<tr class="separator:a0ccb28be5ece08ca072a905faccbf9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60dbe3d8632e49420efb046fe30794b1" id="r_a60dbe3d8632e49420efb046fe30794b1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60dbe3d8632e49420efb046fe30794b1">isCorrectAns</a> (double *x1, double *x2, const int numberOfRoots, const <a class="el" href="structtest.html">test</a> *testedEquation, int numberOfTest)</td></tr>
+<tr class="memdesc:a60dbe3d8632e49420efb046fe30794b1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Function which tests programm.</b>  <br /></td></tr>
+<tr class="separator:a60dbe3d8632e49420efb046fe30794b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af547e13037369bdac184075d49e6f592" id="r_af547e13037369bdac184075d49e6f592"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af547e13037369bdac184075d49e6f592">mySwap</a> (void *a, void *b, const size_t elemMemory)</td></tr>
+<tr class="memdesc:af547e13037369bdac184075d49e6f592"><td class="mdescLeft">&#160;</td><td class="mdescRight">function which swap two numbers The function operates on variables using pointer arithmetic.  <br /></td></tr>
+<tr class="separator:af547e13037369bdac184075d49e6f592"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a13163737259b9a3e87a41b399cc7b6bc" name="a13163737259b9a3e87a41b399cc7b6bc"></a>
@@ -128,26 +137,147 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>nothing</dd></dl>
 <p>equations [type test] - <b>array of different test structures</b><br  />
  progAnswer [type <a class="el" href="structprog_answ.html" title="structure which keeps programm answers">progAnsw</a>] - <b>struct to save prog answers</b><br  />
- testedEquation [type test] - <b>current struct of test</b></p>
-<div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <span class="keyword">sizeof</span>(<a class="code hl_variable" href="tests_8h.html#a9a585a751592145bb1e7f36503084847">equations</a>)/<span class="keyword">sizeof</span>(*equations); i++)</div>
-<div class="line">{</div>
-<div class="line">    <a class="code hl_struct" href="structprog_answ.html">progAnsw</a> progAnswer = {0, 0, 0};</div>
-<div class="line"> </div>
-<div class="line">    <a class="code hl_struct" href="structtest.html">test</a> testedEquation = <a class="code hl_variable" href="tests_8h.html#a9a585a751592145bb1e7f36503084847">equations</a>[i]; <span class="comment">// get struct test from array of test structs</span></div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">    <a class="code hl_function" href="debug_8cpp.html#a60dbe3d8632e49420efb046fe30794b1">isCorrectAns</a>(&amp;progAnswer.<a class="code hl_variable" href="structprog_answ.html#ab9c99d4dc4e713c180fa8a4dd7c48622">x1</a>, &amp;progAnswer.<a class="code hl_variable" href="structprog_answ.html#a757e74641c4d6b7122c02f52d4a21a3a">x2</a>, <a class="code hl_function" href="_solve_equation_8cpp.html#aa497bc0c3a2b2169a829f3163f09b328">SolveEquation</a>(&amp;(testedEquation.<a class="code hl_variable" href="structtest.html#a94fe626233366e4832bb983edb640ee5">equation</a>), &amp;progAnswer), &amp;testedEquation, i+1);</div>
-<div class="line"> </div>
-<div class="line">}</div>
-<div class="ttc" id="a_solve_equation_8cpp_html_aa497bc0c3a2b2169a829f3163f09b328"><div class="ttname"><a href="_solve_equation_8cpp.html#aa497bc0c3a2b2169a829f3163f09b328">SolveEquation</a></div><div class="ttdeci">int SolveEquation(equ *equation, progAnsw *progAnswer)</div><div class="ttdoc">main call function</div><div class="ttdef"><b>Definition</b> SolveEquation.cpp:35</div></div>
-<div class="ttc" id="adebug_8cpp_html_a60dbe3d8632e49420efb046fe30794b1"><div class="ttname"><a href="debug_8cpp.html#a60dbe3d8632e49420efb046fe30794b1">isCorrectAns</a></div><div class="ttdeci">static int isCorrectAns(double *x1, double *x2, const int numberOfRoots, const test *testedEquation, int numberOfTest)</div><div class="ttdoc">Function which tests programm.</div><div class="ttdef"><b>Definition</b> debug.cpp:103</div></div>
-<div class="ttc" id="astructprog_answ_html"><div class="ttname"><a href="structprog_answ.html">progAnsw</a></div><div class="ttdoc">structure which keeps programm answers</div><div class="ttdef"><b>Definition</b> structures.h:18</div></div>
-<div class="ttc" id="astructprog_answ_html_a757e74641c4d6b7122c02f52d4a21a3a"><div class="ttname"><a href="structprog_answ.html#a757e74641c4d6b7122c02f52d4a21a3a">progAnsw::x2</a></div><div class="ttdeci">double x2</div><div class="ttdoc">second prog answer</div><div class="ttdef"><b>Definition</b> structures.h:23</div></div>
-<div class="ttc" id="astructprog_answ_html_ab9c99d4dc4e713c180fa8a4dd7c48622"><div class="ttname"><a href="structprog_answ.html#ab9c99d4dc4e713c180fa8a4dd7c48622">progAnsw::x1</a></div><div class="ttdeci">double x1</div><div class="ttdoc">first prog answer</div><div class="ttdef"><b>Definition</b> structures.h:20</div></div>
-<div class="ttc" id="astructtest_html"><div class="ttname"><a href="structtest.html">test</a></div><div class="ttdoc">structure which keeps different tests</div><div class="ttdef"><b>Definition</b> structures.h:44</div></div>
-<div class="ttc" id="astructtest_html_a94fe626233366e4832bb983edb640ee5"><div class="ttname"><a href="structtest.html#a94fe626233366e4832bb983edb640ee5">test::equation</a></div><div class="ttdeci">equ equation</div><div class="ttdoc">struct of coefficients in equation</div><div class="ttdef"><b>Definition</b> structures.h:47</div></div>
-<div class="ttc" id="atests_8h_html_a9a585a751592145bb1e7f36503084847"><div class="ttname"><a href="tests_8h.html#a9a585a751592145bb1e7f36503084847">equations</a></div><div class="ttdeci">test equations[]</div><div class="ttdoc">array which keep in itself all tests</div><div class="ttdef"><b>Definition</b> tests.h:4</div></div>
-</div><!-- fragment --> 
+ testedEquation [type test] - <b>current struct of test</b> </p>
+
+</div>
+</div>
+<a id="a60dbe3d8632e49420efb046fe30794b1" name="a60dbe3d8632e49420efb046fe30794b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60dbe3d8632e49420efb046fe30794b1">&#9670;&#160;</a></span>isCorrectAns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int isCorrectAns </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>numberOfRoots</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structtest.html">test</a> *</td>          <td class="paramname"><span class="paramname"><em>testedEquation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>numberOfTest</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><b>Function which tests programm.</b> </p>
+<p>Function firstly check if programm number of roots is equal to correct number of roots. Then it checks if roots correct of both sides.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>- first prog root </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x2</td><td>- second prog root </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">numberOfRoots</td><td>- amount of roots </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">testedEquation</td><td>- struct of corect answers </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">numberOfTest</td><td>- number of test</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 - if test is corrected 0 - otherwise</dd></dl>
+<p>x1Corr [type double] - <b>first correct answer</b><br  />
+ x2Corr [type double] - <b>second correct answer</b> </p>
+
+</div>
+</div>
+<a id="af547e13037369bdac184075d49e6f592" name="af547e13037369bdac184075d49e6f592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af547e13037369bdac184075d49e6f592">&#9670;&#160;</a></span>mySwap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mySwap </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t</td>          <td class="paramname"><span class="paramname"><em>elemMemory</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>function which swap two numbers The function operates on variables using pointer arithmetic. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">a</td><td>- first number </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">b</td><td>- second number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">elemMemory</td><td>- how many memory need for *a or *b (in bytes) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>nothing</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>size of a must be equal to size b</dd></dl>
+<p>summ [type size_t] - sum of bytes changed </p>
+
+</div>
+</div>
+<a id="a0ccb28be5ece08ca072a905faccbf9cb" name="a0ccb28be5ece08ca072a905faccbf9cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ccb28be5ece08ca072a905faccbf9cb">&#9670;&#160;</a></span>needToSwap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void needToSwap </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>x2</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>function which swap two numbers </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">x1</td><td>- first number </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x2</td><td>- second number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>nothing</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>use macro <a class="el" href="debug_8cpp.html#add65629caaf9937b019d7701875397e0">myMIN(a, b)</a> </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->

@@ -97,6 +97,7 @@ $(function(){ initResizable(false); });
 <div class="textblock"><code>#include &lt;TXLib.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="debug_8h_source.html">..\headers\debug.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="colors_8h_source.html">..\headers\colors.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="constants_8h_source.html">..\headers\constants.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="structures_8h_source.html">..\headers\structures.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_solve_equation_8h_source.html">..\headers\SolveEquation.h</a>&quot;</code><br />
@@ -109,20 +110,16 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0ccb28be5ece08ca072a905faccbf9cb" id="r_a0ccb28be5ece08ca072a905faccbf9cb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ccb28be5ece08ca072a905faccbf9cb">needToSwap</a> (double *x1, double *x2)</td></tr>
-<tr class="memdesc:a0ccb28be5ece08ca072a905faccbf9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">function which swap two numbers  <br /></td></tr>
-<tr class="separator:a0ccb28be5ece08ca072a905faccbf9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60dbe3d8632e49420efb046fe30794b1" id="r_a60dbe3d8632e49420efb046fe30794b1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60dbe3d8632e49420efb046fe30794b1">isCorrectAns</a> (double *x1, double *x2, const int numberOfRoots, const <a class="el" href="structtest.html">test</a> *testedEquation, int numberOfTest)</td></tr>
-<tr class="memdesc:a60dbe3d8632e49420efb046fe30794b1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Function which tests programm.</b>  <br /></td></tr>
-<tr class="separator:a60dbe3d8632e49420efb046fe30794b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4b9bf5324a657fadc2df16fc5fb48a9" id="r_ad4b9bf5324a657fadc2df16fc5fb48a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4b9bf5324a657fadc2df16fc5fb48a9">swap2</a> (double *x1, double *x2)</td></tr>
-<tr class="separator:ad4b9bf5324a657fadc2df16fc5fb48a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d3ca4e57eae416aea1de76728cb161b" id="r_a1d3ca4e57eae416aea1de76728cb161b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d3ca4e57eae416aea1de76728cb161b">mySwap</a> (void *a, void *b, size_t elemMemory)</td></tr>
-<tr class="memdesc:a1d3ca4e57eae416aea1de76728cb161b"><td class="mdescLeft">&#160;</td><td class="mdescRight">function which swap two numbers The function operates on variables using pointer arithmetic.  <br /></td></tr>
-<tr class="separator:a1d3ca4e57eae416aea1de76728cb161b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13163737259b9a3e87a41b399cc7b6bc" id="r_a13163737259b9a3e87a41b399cc7b6bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13163737259b9a3e87a41b399cc7b6bc">debugFunc</a> ()</td></tr>
 <tr class="memdesc:a13163737259b9a3e87a41b399cc7b6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">function which tests programm  <br /></td></tr>
 <tr class="separator:a13163737259b9a3e87a41b399cc7b6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60dbe3d8632e49420efb046fe30794b1" id="r_a60dbe3d8632e49420efb046fe30794b1"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60dbe3d8632e49420efb046fe30794b1">isCorrectAns</a> (double *x1, double *x2, const int numberOfRoots, const <a class="el" href="structtest.html">test</a> *testedEquation, int numberOfTest)</td></tr>
+<tr class="separator:a60dbe3d8632e49420efb046fe30794b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ccb28be5ece08ca072a905faccbf9cb" id="r_a0ccb28be5ece08ca072a905faccbf9cb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ccb28be5ece08ca072a905faccbf9cb">needToSwap</a> (double *x1, double *x2)</td></tr>
+<tr class="separator:a0ccb28be5ece08ca072a905faccbf9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af547e13037369bdac184075d49e6f592" id="r_af547e13037369bdac184075d49e6f592"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af547e13037369bdac184075d49e6f592">mySwap</a> (void *a, void *b, const size_t elemMemory)</td></tr>
+<tr class="memdesc:af547e13037369bdac184075d49e6f592"><td class="mdescLeft">&#160;</td><td class="mdescRight">function which swap two numbers The function operates on variables using pointer arithmetic.  <br /></td></tr>
+<tr class="separator:af547e13037369bdac184075d49e6f592"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="add65629caaf9937b019d7701875397e0" name="add65629caaf9937b019d7701875397e0"></a>
@@ -173,26 +170,8 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>nothing</dd></dl>
 <p>equations [type test] - <b>array of different test structures</b><br  />
  progAnswer [type <a class="el" href="structprog_answ.html" title="structure which keeps programm answers">progAnsw</a>] - <b>struct to save prog answers</b><br  />
- testedEquation [type test] - <b>current struct of test</b></p>
-<div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; <span class="keyword">sizeof</span>(<a class="code hl_variable" href="tests_8h.html#a9a585a751592145bb1e7f36503084847">equations</a>)/<span class="keyword">sizeof</span>(*equations); i++)</div>
-<div class="line">{</div>
-<div class="line">    <a class="code hl_struct" href="structprog_answ.html">progAnsw</a> progAnswer = {0, 0, 0};</div>
-<div class="line"> </div>
-<div class="line">    <a class="code hl_struct" href="structtest.html">test</a> testedEquation = <a class="code hl_variable" href="tests_8h.html#a9a585a751592145bb1e7f36503084847">equations</a>[i]; <span class="comment">// get struct test from array of test structs</span></div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">    <a class="code hl_function" href="#a60dbe3d8632e49420efb046fe30794b1">isCorrectAns</a>(&amp;progAnswer.<a class="code hl_variable" href="structprog_answ.html#ab9c99d4dc4e713c180fa8a4dd7c48622">x1</a>, &amp;progAnswer.<a class="code hl_variable" href="structprog_answ.html#a757e74641c4d6b7122c02f52d4a21a3a">x2</a>, <a class="code hl_function" href="_solve_equation_8cpp.html#aa497bc0c3a2b2169a829f3163f09b328">SolveEquation</a>(&amp;(testedEquation.<a class="code hl_variable" href="structtest.html#a94fe626233366e4832bb983edb640ee5">equation</a>), &amp;progAnswer), &amp;testedEquation, i+1);</div>
-<div class="line"> </div>
-<div class="line">}</div>
-<div class="ttc" id="a_solve_equation_8cpp_html_aa497bc0c3a2b2169a829f3163f09b328"><div class="ttname"><a href="_solve_equation_8cpp.html#aa497bc0c3a2b2169a829f3163f09b328">SolveEquation</a></div><div class="ttdeci">int SolveEquation(equ *equation, progAnsw *progAnswer)</div><div class="ttdoc">main call function</div><div class="ttdef"><b>Definition</b> SolveEquation.cpp:35</div></div>
-<div class="ttc" id="adebug_8cpp_html_a60dbe3d8632e49420efb046fe30794b1"><div class="ttname"><a href="#a60dbe3d8632e49420efb046fe30794b1">isCorrectAns</a></div><div class="ttdeci">static int isCorrectAns(double *x1, double *x2, const int numberOfRoots, const test *testedEquation, int numberOfTest)</div><div class="ttdoc">Function which tests programm.</div><div class="ttdef"><b>Definition</b> debug.cpp:103</div></div>
-<div class="ttc" id="astructprog_answ_html"><div class="ttname"><a href="structprog_answ.html">progAnsw</a></div><div class="ttdoc">structure which keeps programm answers</div><div class="ttdef"><b>Definition</b> structures.h:18</div></div>
-<div class="ttc" id="astructprog_answ_html_a757e74641c4d6b7122c02f52d4a21a3a"><div class="ttname"><a href="structprog_answ.html#a757e74641c4d6b7122c02f52d4a21a3a">progAnsw::x2</a></div><div class="ttdeci">double x2</div><div class="ttdoc">second prog answer</div><div class="ttdef"><b>Definition</b> structures.h:23</div></div>
-<div class="ttc" id="astructprog_answ_html_ab9c99d4dc4e713c180fa8a4dd7c48622"><div class="ttname"><a href="structprog_answ.html#ab9c99d4dc4e713c180fa8a4dd7c48622">progAnsw::x1</a></div><div class="ttdeci">double x1</div><div class="ttdoc">first prog answer</div><div class="ttdef"><b>Definition</b> structures.h:20</div></div>
-<div class="ttc" id="astructtest_html"><div class="ttname"><a href="structtest.html">test</a></div><div class="ttdoc">structure which keeps different tests</div><div class="ttdef"><b>Definition</b> structures.h:44</div></div>
-<div class="ttc" id="astructtest_html_a94fe626233366e4832bb983edb640ee5"><div class="ttname"><a href="structtest.html#a94fe626233366e4832bb983edb640ee5">test::equation</a></div><div class="ttdeci">equ equation</div><div class="ttdoc">struct of coefficients in equation</div><div class="ttdef"><b>Definition</b> structures.h:47</div></div>
-<div class="ttc" id="atests_8h_html_a9a585a751592145bb1e7f36503084847"><div class="ttname"><a href="tests_8h.html#a9a585a751592145bb1e7f36503084847">equations</a></div><div class="ttdeci">test equations[]</div><div class="ttdoc">array which keep in itself all tests</div><div class="ttdef"><b>Definition</b> tests.h:4</div></div>
-</div><!-- fragment --> 
+ testedEquation [type test] - <b>current struct of test</b> </p>
+
 </div>
 </div>
 <a id="a60dbe3d8632e49420efb046fe30794b1" name="a60dbe3d8632e49420efb046fe30794b1"></a>
@@ -237,61 +216,10 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><b>Function which tests programm.</b> </p>
-<p>Function firstly check if programm number of roots is equal to correct number of roots. Then it checks if roots correct of both sides.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>- first prog root </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">x2</td><td>- second prog root </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">numberOfRoots</td><td>- amount of roots </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">testedEquation</td><td>- struct of corect answers </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">numberOfTest</td><td>- number of test</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>1 - if test is corrected 0 - otherwise</dd></dl>
-<p>x1Corr [type double] - <b>first correct answer</b><br  />
- x2Corr [type double] - <b>second correct answer</b></p>
-<div class="fragment"><div class="line">printf(<span class="stringliteral">&quot;Test \033[43m\033[30m#%d\033[0m &quot;</span>, numberOfTest);</div>
-<div class="line"> </div>
-<div class="line"><a class="code hl_struct" href="structcorr_answ.html">corrAnsw</a> correctAnswers = testedEquation-&gt;corrAns;</div>
-<div class="line"><span class="keywordtype">double</span> x1Corr = correctAnswers.<a class="code hl_variable" href="structcorr_answ.html#a7f8972e74ff316af3b1ea415811546eb">x1Corr</a>;</div>
-<div class="line"><span class="keywordtype">double</span> x2Corr = correctAnswers.<a class="code hl_variable" href="structcorr_answ.html#ad44c31369a1f08e56c93adb5864fe8e3">x2Corr</a>;</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> (numberOfRoots != correctAnswers.<a class="code hl_variable" href="structcorr_answ.html#af50583352e88856f5fc324a4387121e3">numberOfRootsCorr</a>)</div>
-<div class="line">{</div>
-<div class="line">    printf(<span class="stringliteral">&quot;\033[31mIncorrect number of roots!\033[0m\n&quot;</span>);</div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">} <span class="keywordflow">else</span> <span class="keywordflow">if</span> (numberOfRoots == <a class="code hl_variable" href="constants_8h.html#a35edd79502e9fd1c58eb07a2ad3f4d0a">SS_INF_ROOTS</a>){</div>
-<div class="line">    printf(<span class="stringliteral">&quot;\033[32mCompletely correct roots!\033[0m\n&quot;</span>);</div>
-<div class="line">    <span class="keywordflow">return</span> 1;</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><a class="code hl_function" href="#a0ccb28be5ece08ca072a905faccbf9cb">needToSwap</a>(x1, x2);</div>
-<div class="line"><a class="code hl_function" href="#a0ccb28be5ece08ca072a905faccbf9cb">needToSwap</a>(&amp;x1Corr, &amp;x2Corr);</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> (fabs(fabs(*x1) - fabs(x1Corr)) &lt; <a class="code hl_variable" href="constants_8h.html#ab2ff0059e7b3d9a6abda112f360d1b56">compareZero</a> &amp;&amp; fabs(fabs(*x2) - fabs(x2Corr)) &lt; <a class="code hl_variable" href="constants_8h.html#ab2ff0059e7b3d9a6abda112f360d1b56">compareZero</a>)</div>
-<div class="line">{</div>
-<div class="line">    printf(<span class="stringliteral">&quot;\033[32mCompletely correct roots!\033[0m\n&quot;</span>);</div>
-<div class="line">    <span class="keywordflow">return</span> 1;</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line">printf(<span class="stringliteral">&quot;\033[31mIncorrect roots!\033[0m Program sol1: %lg Program sol2: %lg Your sol1: %lg Your sol2: %lg\n&quot;</span>,</div>
-<div class="line">    *x1, *x2, correctAnswers.<a class="code hl_variable" href="structcorr_answ.html#a7f8972e74ff316af3b1ea415811546eb">x1Corr</a>, correctAnswers.<a class="code hl_variable" href="structcorr_answ.html#ad44c31369a1f08e56c93adb5864fe8e3">x2Corr</a>);</div>
-<div class="line">printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><span class="keywordflow">return</span> 0;</div>
-<div class="ttc" id="aconstants_8h_html_a35edd79502e9fd1c58eb07a2ad3f4d0a"><div class="ttname"><a href="constants_8h.html#a35edd79502e9fd1c58eb07a2ad3f4d0a">SS_INF_ROOTS</a></div><div class="ttdeci">const int SS_INF_ROOTS</div><div class="ttdoc">parameter for checking if equation have infinity amount of roots</div><div class="ttdef"><b>Definition</b> constants.h:6</div></div>
-<div class="ttc" id="aconstants_8h_html_ab2ff0059e7b3d9a6abda112f360d1b56"><div class="ttname"><a href="constants_8h.html#ab2ff0059e7b3d9a6abda112f360d1b56">compareZero</a></div><div class="ttdeci">const double compareZero</div><div class="ttdoc">parameter for checking if double is zero</div><div class="ttdef"><b>Definition</b> constants.h:4</div></div>
-<div class="ttc" id="adebug_8cpp_html_a0ccb28be5ece08ca072a905faccbf9cb"><div class="ttname"><a href="#a0ccb28be5ece08ca072a905faccbf9cb">needToSwap</a></div><div class="ttdeci">static void needToSwap(double *x1, double *x2)</div><div class="ttdoc">function which swap two numbers</div><div class="ttdef"><b>Definition</b> debug.cpp:152</div></div>
-<div class="ttc" id="astructcorr_answ_html"><div class="ttname"><a href="structcorr_answ.html">corrAnsw</a></div><div class="ttdoc">structure which keeps correct answers for tests</div><div class="ttdef"><b>Definition</b> structures.h:31</div></div>
-<div class="ttc" id="astructcorr_answ_html_a7f8972e74ff316af3b1ea415811546eb"><div class="ttname"><a href="structcorr_answ.html#a7f8972e74ff316af3b1ea415811546eb">corrAnsw::x1Corr</a></div><div class="ttdeci">double x1Corr</div><div class="ttdoc">first correct answer</div><div class="ttdef"><b>Definition</b> structures.h:33</div></div>
-<div class="ttc" id="astructcorr_answ_html_ad44c31369a1f08e56c93adb5864fe8e3"><div class="ttname"><a href="structcorr_answ.html#ad44c31369a1f08e56c93adb5864fe8e3">corrAnsw::x2Corr</a></div><div class="ttdeci">double x2Corr</div><div class="ttdoc">second correct answer</div><div class="ttdef"><b>Definition</b> structures.h:36</div></div>
-<div class="ttc" id="astructcorr_answ_html_af50583352e88856f5fc324a4387121e3"><div class="ttname"><a href="structcorr_answ.html#af50583352e88856f5fc324a4387121e3">corrAnsw::numberOfRootsCorr</a></div><div class="ttdeci">int numberOfRootsCorr</div><div class="ttdoc">number of correct answers</div><div class="ttdef"><b>Definition</b> structures.h:39</div></div>
-</div><!-- fragment --> 
 </div>
 </div>
-<a id="a1d3ca4e57eae416aea1de76728cb161b" name="a1d3ca4e57eae416aea1de76728cb161b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d3ca4e57eae416aea1de76728cb161b">&#9670;&#160;</a></span>mySwap()</h2>
+<a id="af547e13037369bdac184075d49e6f592" name="af547e13037369bdac184075d49e6f592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af547e13037369bdac184075d49e6f592">&#9670;&#160;</a></span>mySwap()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -309,7 +237,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>elemMemory</em></span>&#160;)</td>
+          <td class="paramtype">const size_t</td>          <td class="paramname"><span class="paramname"><em>elemMemory</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -317,77 +245,16 @@ Functions</h2></td></tr>
 <p>function which swap two numbers The function operates on variables using pointer arithmetic. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>- first number </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>- second number </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">a</td><td>- first number </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">b</td><td>- second number </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">elemMemory</td><td>- how many memory need for *a or *b (in bytes) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>nothing</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>size of a must be equal to size b</dd></dl>
-<p>summ [type size_t] - sum of bytes changed</p>
-<div class="fragment"><div class="line"><span class="keywordtype">size_t</span> summ = 0;</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">long</span>* a_long = (<span class="keywordtype">long</span>*)a;</div>
-<div class="line"><span class="keywordtype">long</span>* b_long = (<span class="keywordtype">long</span>*)b;</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"><span class="keywordflow">while</span> (summ + <span class="keyword">sizeof</span>(<span class="keywordtype">long</span>) &lt;= elemMemory){</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">long</span> buf = *a_long;</div>
-<div class="line">    *a_long = *b_long;</div>
-<div class="line">    *b_long = buf;</div>
-<div class="line"> </div>
-<div class="line">    a_long += 1;</div>
-<div class="line">    b_long += 1;</div>
-<div class="line">    summ += <span class="keyword">sizeof</span>(long);</div>
-<div class="line"> </div>
-<div class="line">}</div>
-<div class="line"><span class="keywordtype">int</span>* a_int = (<span class="keywordtype">int</span>*)a_long;</div>
-<div class="line"><span class="keywordtype">int</span>* b_int = (<span class="keywordtype">int</span>*)b_long;</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> (summ + <span class="keyword">sizeof</span>(<span class="keywordtype">int</span>) &lt;= elemMemory){</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">int</span> buf = *a_int;</div>
-<div class="line">    *a_int = *b_int;</div>
-<div class="line">    *b_int = buf;</div>
-<div class="line"> </div>
-<div class="line">    a_int += 1;</div>
-<div class="line">    b_int += 1;</div>
-<div class="line">    summ += <span class="keyword">sizeof</span>(int);</div>
-<div class="line"> </div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">short</span>* a_short = (<span class="keywordtype">short</span>*)a_int;</div>
-<div class="line"><span class="keywordtype">short</span>* b_short = (<span class="keywordtype">short</span>*)b_int;</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> (summ + <span class="keyword">sizeof</span>(<span class="keywordtype">short</span>) &lt;= elemMemory){</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">short</span> buf = *a_short;</div>
-<div class="line">    *a_short = *b_short;</div>
-<div class="line">    *b_short = buf;</div>
-<div class="line"> </div>
-<div class="line">    a_short += 1;</div>
-<div class="line">    b_short += 1;</div>
-<div class="line">    summ += <span class="keyword">sizeof</span>(short);</div>
-<div class="line"> </div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">char</span>* a_char = (<span class="keywordtype">char</span>*)a_short;</div>
-<div class="line"><span class="keywordtype">char</span>* b_char = (<span class="keywordtype">char</span>*)b_short;</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> (summ + <span class="keyword">sizeof</span>(<span class="keywordtype">short</span>) &lt;= elemMemory){</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordtype">char</span> buf = *a_char;</div>
-<div class="line">    *a_char = *b_char;</div>
-<div class="line">    *b_char = buf;</div>
-<div class="line"> </div>
-<div class="line">    a_char += 1;</div>
-<div class="line">    b_char += 1;</div>
-<div class="line">    summ += <span class="keyword">sizeof</span>(char);</div>
-<div class="line"> </div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<p>summ [type size_t] - sum of bytes changed </p>
+
 </div>
 </div>
 <a id="a0ccb28be5ece08ca072a905faccbf9cb" name="a0ccb28be5ece08ca072a905faccbf9cb"></a>
@@ -415,46 +282,6 @@ Functions</h2></td></tr>
 <span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
-</div><div class="memdoc">
-
-<p>function which swap two numbers </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>- first number </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">x2</td><td>- second number </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>nothing</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>use macro <a class="el" href="#add65629caaf9937b019d7701875397e0">myMIN(a, b)</a></dd></dl>
-<div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_define" href="#add65629caaf9937b019d7701875397e0">myMIN</a>(*x1, *x2))</div>
-<div class="line">{</div>
-<div class="line"><span class="comment">//printf(&quot;ok\n&quot;);</span></div>
-<div class="line">   <a class="code hl_function" href="#a1d3ca4e57eae416aea1de76728cb161b">mySwap</a>(x1, x2, 8);</div>
-<div class="line">}</div>
-<div class="line"><span class="keywordflow">return</span>;</div>
-<div class="ttc" id="adebug_8cpp_html_a1d3ca4e57eae416aea1de76728cb161b"><div class="ttname"><a href="#a1d3ca4e57eae416aea1de76728cb161b">mySwap</a></div><div class="ttdeci">void mySwap(void *a, void *b, size_t elemMemory)</div><div class="ttdoc">function which swap two numbers The function operates on variables using pointer arithmetic.</div><div class="ttdef"><b>Definition</b> debug.cpp:239</div></div>
-<div class="ttc" id="adebug_8cpp_html_add65629caaf9937b019d7701875397e0"><div class="ttname"><a href="#add65629caaf9937b019d7701875397e0">myMIN</a></div><div class="ttdeci">#define myMIN(a, b)</div><div class="ttdef"><b>Definition</b> debug.cpp:9</div></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a id="ad4b9bf5324a657fadc2df16fc5fb48a9" name="ad4b9bf5324a657fadc2df16fc5fb48a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4b9bf5324a657fadc2df16fc5fb48a9">&#9670;&#160;</a></span>swap2()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void swap2 </td>
-          <td>(</td>
-          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>x2</em></span>&#160;)</td>
-        </tr>
-      </table>
 </div><div class="memdoc">
 
 </div>

@@ -1,6 +1,16 @@
 #ifndef SOLVEEQUATION_H_INCLUDED
 #define SOLVEEQUATION_H_INCLUDED
 
-int SolveEquation(equ* equation, progAnsw* progAnswer);
+/**
+    \brief main call function
+    \param [in] equation - struct in which the coefficients of equation are stored
+    \param [out] progAnswer - struct in which answers are stored
+    \return return amount of solutions
+
+	D [type double] - discriminant of equation
+
+*/
+
+int SolveEquation(const equ* equation, progAnsw* progAnswer);
 
 #endif // SOLVEEQUATION_H_INCLUDED

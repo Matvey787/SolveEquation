@@ -131,26 +131,12 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">equation</td><td>- struct in which the coefficients of equation are stored </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">progAnswer</td><td>- struct in which answers are stored </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">progAnswer</td><td>- struct in which answers are stored </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>amount of roots</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">double</span> b = equation-&gt;b;</div>
-<div class="line"><span class="keywordtype">double</span> c = equation-&gt;c;</div>
-<div class="line"><span class="keywordtype">double</span> *x1 = &amp;(progAnswer-&gt;x1);</div>
-<div class="line"><span class="keywordtype">double</span> *x2 = &amp;(progAnswer -&gt; x2);</div>
-<div class="line"><span class="keywordflow">if</span> (fabs(b) &gt; <a class="code hl_variable" href="constants_8h.html#ab2ff0059e7b3d9a6abda112f360d1b56">compareZero</a>)</div>
-<div class="line">{</div>
-<div class="line">    *x1 = -c / b;</div>
-<div class="line">    *x2 = *x1;</div>
-<div class="line">    <span class="keywordflow">return</span> 1;</div>
-<div class="line">} <span class="keywordflow">else</span> {</div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code hl_variable" href="constants_8h.html#a35edd79502e9fd1c58eb07a2ad3f4d0a">SS_INF_ROOTS</a>;</div>
-<div class="line">}</div>
-<div class="ttc" id="aconstants_8h_html_a35edd79502e9fd1c58eb07a2ad3f4d0a"><div class="ttname"><a href="constants_8h.html#a35edd79502e9fd1c58eb07a2ad3f4d0a">SS_INF_ROOTS</a></div><div class="ttdeci">const int SS_INF_ROOTS</div><div class="ttdoc">parameter for checking if equation have infinity amount of roots</div><div class="ttdef"><b>Definition</b> constants.h:6</div></div>
-<div class="ttc" id="aconstants_8h_html_ab2ff0059e7b3d9a6abda112f360d1b56"><div class="ttname"><a href="constants_8h.html#ab2ff0059e7b3d9a6abda112f360d1b56">compareZero</a></div><div class="ttdeci">const double compareZero</div><div class="ttdoc">parameter for checking if double is zero</div><div class="ttdef"><b>Definition</b> constants.h:4</div></div>
-</div><!-- fragment --> 
+<dl class="section return"><dt>Returns</dt><dd>amount of roots </dd></dl>
+
 </div>
 </div>
 <a id="a3df4633cc63625d0536274e624f3e6bf" name="a3df4633cc63625d0536274e624f3e6bf"></a>
@@ -182,35 +168,12 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">D</td><td>- discriminant </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">equation</td><td>- struct in which the coefficients of equation are stored </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">progAnswer</td><td>- struct in which answers are stored </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">progAnswer</td><td>- struct in which answers are stored </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>amount of roots</dd></dl>
-<div class="fragment"><div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> a = equation-&gt;a;</div>
-<div class="line"><span class="keyword">const</span> <span class="keywordtype">double</span> b = equation-&gt;b;</div>
-<div class="line"><span class="keywordtype">double</span>* x1 = &amp;(progAnswer-&gt;x1);</div>
-<div class="line"><span class="keywordtype">double</span>* x2 = &amp;(progAnswer-&gt;x2);</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> (*D &gt; <a class="code hl_variable" href="constants_8h.html#ab2ff0059e7b3d9a6abda112f360d1b56">compareZero</a>)</div>
-<div class="line">{</div>
-<div class="line">    *x1 = (-b + sqrt(*D)) / (2 * a);</div>
-<div class="line">    *x2 = (-b - sqrt(*D)) / (2 * a);</div>
-<div class="line">    <span class="keywordflow">return</span> 2;</div>
-<div class="line"> </div>
-<div class="line">}</div>
-<div class="line"><span class="keywordflow">else</span> <span class="keywordflow">if</span> (fabs(*D) &lt; <a class="code hl_variable" href="constants_8h.html#ab2ff0059e7b3d9a6abda112f360d1b56">compareZero</a>)</div>
-<div class="line">{</div>
-<div class="line">    *x1 = (-b) / (2 * a);</div>
-<div class="line">    *x2 = *x1;</div>
-<div class="line">    <span class="keywordflow">return</span> 1;</div>
-<div class="line">}</div>
-<div class="line"><span class="keywordflow">else</span></div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line"> </div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<dl class="section return"><dt>Returns</dt><dd>amount of roots </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->
