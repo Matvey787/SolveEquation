@@ -1,7 +1,7 @@
 all: compile
 
-compile: main.o funcTypesEquation.o debug.o release.o SolveEquation.o
-	g++ main.o funcTypesEquation.o debug.o release.o SolveEquation.o -o out
+compile: cpp_files\main.o cpp_files\funcTypesEquation.o cpp_files\debug.o cpp_files\release.o cpp_files\SolveEquation.o
+	g++ cpp_files\main.o cpp_files\funcTypesEquation.o cpp_files\debug.o cpp_files\release.o cpp_files\SolveEquation.o -o out
 
 main.o: cpp_files\main.cpp
 	g++ -c cpp_files\main.cpp

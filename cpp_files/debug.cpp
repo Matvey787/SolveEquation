@@ -64,7 +64,7 @@ static void needToSwap(double* x1, double* x2){
     return;
 }
 
-void mySwap(void* a, void* b, const size_t elemMemory){
+void mySwap(void* a, void* b, size_t elemMemory){
     size_t summ = 0;
 
     uint64_t* a_long = (uint64_t*)a;

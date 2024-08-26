@@ -1,6 +1,8 @@
+#include <TXLib.h>
+#include <stdio.h>
+#include "..\headers\structures.h"
 #ifndef DEBUG_H_INCLUDED
 #define DEBUG_H_INCLUDED
-
 /**
     \brief function which tests programm
 
@@ -49,6 +51,6 @@ static int isCorrectAns(double* x1, double* x2, const int numberOfRoots, const t
     \warning size of a must be equal to size b
 */
 
-void mySwap(void* a, void* b, const size_t elemMemory);
+void mySwap(void* a, void* b, size_t elemMemory);
 
 #endif // DEBUG_H_INCLUDED

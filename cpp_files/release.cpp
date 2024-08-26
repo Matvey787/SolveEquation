@@ -43,8 +43,8 @@ static void clearInput() {
 }
 
 static void printSolutions(const int* numberOfSol, const progAnsw* progAnswer) {
-    double*x1 = &progAnswer->x1;
-    double*x2 = &progAnswer->x2;
+    const double*x1 = &progAnswer->x1;
+    const double*x2 = &progAnswer->x2;
 	switch (*numberOfSol) {
 	case 0:
 		printf("There are no roots!");
