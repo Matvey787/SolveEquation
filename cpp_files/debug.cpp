@@ -15,8 +15,11 @@ void mySwap(void* a, void* b, size_t elemMemory);
 
 /**
     \brief function which tests programm
+
     \param nothing get
+
     \return nothing
+
     \code
         for (unsigned int i = 0; i < sizeof(equations)/sizeof(*equations); i++)
         {
