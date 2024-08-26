@@ -11,6 +11,9 @@
     \param [in] equation - struct in which the coefficients of equation are stored
     \param [in] progAnswer - struct in which answers are stored
     \return return amount of solutions
+
+	D [type double] - discriminant of equation
+
     \code
     assert(equation != nullptr && "equation is point to null");
 	assert(isfinite(equation->a) && "Incorrect a");

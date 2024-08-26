@@ -169,6 +169,8 @@ static void needToSwap(double* x1, double* x2){
     \warning
         size of a must be equal to size b
 
+    summ [type size_t] - sum of bytes changed
+
     \code
         size_t summ = 0;
 

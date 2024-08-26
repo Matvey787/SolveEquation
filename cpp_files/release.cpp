@@ -17,6 +17,10 @@ static void getCoeff(const char* message, double* k);
     \param doesn't get any parameters
     \return nothing
 
+    numberOfSol [type size_t] - amount of solutions<br>
+    equation [type equ] - struct keeps equation coefficients<br>
+    progAnswer [type progAnsw] - struct keeps programm answers
+
     \code
     int numberOfSol = 0;
 	equ equation;
@@ -64,6 +68,11 @@ static void getInput(equ* equation) {
 	\param [in] k - current coef (befor x^2, x or just free)
     \return nothing
 
+    c [type int] - get return from scanf<br>
+    maxAttempts [type int] - max attempts for user to input info
+
+    \warning !!! Example: if maxAttempts = 2 it means that user have <b>3</b> attempts !!!
+
     \code
         int c=0;
     int maxAttempts = 2;
@@ -79,8 +88,6 @@ static void getInput(equ* equation) {
 	clearInput();
     \endcode
 */
-
-/*! maxAttempts [type int] - max number of attempts (<b> ! counter goes to zero, so 2 attampts is 3 attempts ! </b>) */
 
 static void getCoeff(const char* message, double* k){
     int c=0;

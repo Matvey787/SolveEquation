@@ -130,7 +130,9 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>return amount of solutions <div class="fragment"><div class="line">assert(equation != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;equation is point to null&quot;</span>);</div>
+<dl class="section return"><dt>Returns</dt><dd>return amount of solutions</dd></dl>
+<p>D [type double] - discriminant of equation</p>
+<div class="fragment"><div class="line">assert(equation != <span class="keyword">nullptr</span> &amp;&amp; <span class="stringliteral">&quot;equation is point to null&quot;</span>);</div>
 <div class="line">assert(isfinite(equation-&gt;a) &amp;&amp; <span class="stringliteral">&quot;Incorrect a&quot;</span>);</div>
 <div class="line">assert(isfinite(equation-&gt;b) &amp;&amp; <span class="stringliteral">&quot;Incorrect b&quot;</span>);</div>
 <div class="line">assert(isfinite(equation-&gt;c) &amp;&amp; <span class="stringliteral">&quot;Incorrect c&quot;</span>);</div>
@@ -147,8 +149,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="aconstants_8h_html_ab2ff0059e7b3d9a6abda112f360d1b56"><div class="ttname"><a href="constants_8h.html#ab2ff0059e7b3d9a6abda112f360d1b56">compareZero</a></div><div class="ttdeci">const double compareZero</div><div class="ttdoc">parameter for checking if double is zero</div><div class="ttdef"><b>Definition</b> constants.h:4</div></div>
 <div class="ttc" id="afunc_types_equation_8cpp_html_a14cea80dcf4f8a89c45884b2b9b45539"><div class="ttname"><a href="func_types_equation_8cpp.html#a14cea80dcf4f8a89c45884b2b9b45539">isLinearEquation</a></div><div class="ttdeci">int isLinearEquation(const equ *equation, progAnsw *progAnswer)</div><div class="ttdoc">same as not linear func but work with if coefficient before x^2 = 0</div><div class="ttdef"><b>Definition</b> funcTypesEquation.cpp:90</div></div>
 <div class="ttc" id="afunc_types_equation_8cpp_html_a3df4633cc63625d0536274e624f3e6bf"><div class="ttname"><a href="func_types_equation_8cpp.html#a3df4633cc63625d0536274e624f3e6bf">notLinearEquation</a></div><div class="ttdeci">int notLinearEquation(const double *D, const equ *equation, progAnsw *progAnswer)</div><div class="ttdoc">function which swap two numbers</div><div class="ttdef"><b>Definition</b> funcTypesEquation.cpp:42</div></div>
-</div><!-- fragment --> </dd></dl>
-
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

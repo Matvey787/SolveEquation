@@ -190,6 +190,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>nothing</dd></dl>
+<p>c [type int] - get return from scanf<br  />
+ maxAttempts [type int] - max attempts for user to input info</p>
+<dl class="section warning"><dt>Warning</dt><dd>!!! Example: if maxAttempts = 2 it means that user have <b>3</b> attempts !!!</dd></dl>
 <div class="fragment"><div class="line">    <span class="keywordtype">int</span> c=0;</div>
 <div class="line"><span class="keywordtype">int</span> maxAttempts = 2;</div>
 <div class="line"><span class="keywordflow">while</span> (printf(<span class="stringliteral">&quot;%s&quot;</span>, message) &amp;&amp; ((c = fscanf(stdin, <span class="stringliteral">&quot;%lg&quot;</span>, k)) != 1) &amp;&amp; (c != EOF) &amp;&amp; maxAttempts &gt;= 1){</div>
@@ -202,9 +205,8 @@ Functions</h2></td></tr>
 <div class="line">    exit(1);</div>
 <div class="line">    }</div>
 <div class="line"><a class="code hl_function" href="#ab4fa4af9bbcdf25e719917d23bc3a8e3">clearInput</a>();</div>
-<div class="ttc" id="arelease_8cpp_html_ab4fa4af9bbcdf25e719917d23bc3a8e3"><div class="ttname"><a href="#ab4fa4af9bbcdf25e719917d23bc3a8e3">clearInput</a></div><div class="ttdeci">static void clearInput()</div><div class="ttdoc">if scanf() failed to read information, then this function is executed</div><div class="ttdef"><b>Definition</b> release.cpp:110</div></div>
-</div><!-- fragment --><p>maxAttempts [type int] - max number of attempts (<b> ! counter goes to zero, so 2 attampts is 3 attempts ! </b>) </p>
-
+<div class="ttc" id="arelease_8cpp_html_ab4fa4af9bbcdf25e719917d23bc3a8e3"><div class="ttname"><a href="#ab4fa4af9bbcdf25e719917d23bc3a8e3">clearInput</a></div><div class="ttdeci">static void clearInput()</div><div class="ttdoc">if scanf() failed to read information, then this function is executed</div><div class="ttdef"><b>Definition</b> release.cpp:117</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a84dfec17e5c470d240be038c2a6c5c97" name="a84dfec17e5c470d240be038c2a6c5c97"></a>
@@ -241,7 +243,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line"><a class="code hl_function" href="#a4ed030911c5fbc3b5fa3408c568f9fc9">getCoeff</a>(<span class="stringliteral">&quot;Enter the coefficient at x^2: &quot;</span>,   &amp;equation-&gt;a);</div>
 <div class="line"><a class="code hl_function" href="#a4ed030911c5fbc3b5fa3408c568f9fc9">getCoeff</a>(<span class="stringliteral">&quot;Enter the coefficient at x: &quot;</span>,     &amp;equation-&gt;b);</div>
 <div class="line"><a class="code hl_function" href="#a4ed030911c5fbc3b5fa3408c568f9fc9">getCoeff</a>(<span class="stringliteral">&quot;Enter free coefficient: &quot;</span>, &amp;equation-&gt;c);</div>
-<div class="ttc" id="arelease_8cpp_html_a4ed030911c5fbc3b5fa3408c568f9fc9"><div class="ttname"><a href="#a4ed030911c5fbc3b5fa3408c568f9fc9">getCoeff</a></div><div class="ttdeci">static void getCoeff(const char *message, double *k)</div><div class="ttdoc">func which gets data from user (just continue of getInput...)</div><div class="ttdef"><b>Definition</b> release.cpp:85</div></div>
+<div class="ttc" id="arelease_8cpp_html_a4ed030911c5fbc3b5fa3408c568f9fc9"><div class="ttname"><a href="#a4ed030911c5fbc3b5fa3408c568f9fc9">getCoeff</a></div><div class="ttdeci">static void getCoeff(const char *message, double *k)</div><div class="ttdoc">func which gets data from user (just continue of getInput...)</div><div class="ttdef"><b>Definition</b> release.cpp:92</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -326,6 +328,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>nothing</dd></dl>
+<p>numberOfSol [type size_t] - amount of solutions<br  />
+ equation [type equ] - struct keeps equation coefficients<br  />
+ progAnswer [type <a class="el" href="structprog_answ.html" title="structure which keeps programm answers">progAnsw</a>] - struct keeps programm answers</p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> numberOfSol = 0;</div>
 <div class="line"><a class="code hl_struct" href="structequ.html">equ</a> equation;</div>
 <div class="line"><a class="code hl_function" href="#a84dfec17e5c470d240be038c2a6c5c97">getInput</a>(&amp;equation);</div>
@@ -333,11 +338,11 @@ Functions</h2></td></tr>
 <div class="line"><a class="code hl_struct" href="structprog_answ.html">progAnsw</a> progAnswer = {0, 0, 0};</div>
 <div class="line">numberOfSol = <a class="code hl_function" href="_solve_equation_8cpp.html#aa497bc0c3a2b2169a829f3163f09b328">SolveEquation</a>(&amp;equation, &amp;progAnswer);</div>
 <div class="line"><a class="code hl_function" href="#ac4434accca83c4b6afe93b1bf26cd902">printSolutions</a>(&amp;numberOfSol, &amp;progAnswer);</div>
-<div class="ttc" id="a_solve_equation_8cpp_html_aa497bc0c3a2b2169a829f3163f09b328"><div class="ttname"><a href="_solve_equation_8cpp.html#aa497bc0c3a2b2169a829f3163f09b328">SolveEquation</a></div><div class="ttdeci">int SolveEquation(equ *equation, progAnsw *progAnswer)</div><div class="ttdoc">main call function</div><div class="ttdef"><b>Definition</b> SolveEquation.cpp:32</div></div>
-<div class="ttc" id="arelease_8cpp_html_a84dfec17e5c470d240be038c2a6c5c97"><div class="ttname"><a href="#a84dfec17e5c470d240be038c2a6c5c97">getInput</a></div><div class="ttdeci">static void getInput(equ *equation)</div><div class="ttdoc">func which gets data from user</div><div class="ttdef"><b>Definition</b> release.cpp:55</div></div>
-<div class="ttc" id="arelease_8cpp_html_ac4434accca83c4b6afe93b1bf26cd902"><div class="ttname"><a href="#ac4434accca83c4b6afe93b1bf26cd902">printSolutions</a></div><div class="ttdeci">static void printSolutions(const int *numberOfSol, progAnsw *progAnswer)</div><div class="ttdoc">print answers in special format</div><div class="ttdef"><b>Definition</b> release.cpp:142</div></div>
-<div class="ttc" id="astructequ_html"><div class="ttname"><a href="structequ.html">equ</a></div><div class="ttdoc">structure which keeps coefficients of quad equation</div><div class="ttdef"><b>Definition</b> structures.h:4</div></div>
-<div class="ttc" id="astructprog_answ_html"><div class="ttname"><a href="structprog_answ.html">progAnsw</a></div><div class="ttdoc">structure which keeps programm answers</div><div class="ttdef"><b>Definition</b> structures.h:10</div></div>
+<div class="ttc" id="a_solve_equation_8cpp_html_aa497bc0c3a2b2169a829f3163f09b328"><div class="ttname"><a href="_solve_equation_8cpp.html#aa497bc0c3a2b2169a829f3163f09b328">SolveEquation</a></div><div class="ttdeci">int SolveEquation(equ *equation, progAnsw *progAnswer)</div><div class="ttdoc">main call function</div><div class="ttdef"><b>Definition</b> SolveEquation.cpp:35</div></div>
+<div class="ttc" id="arelease_8cpp_html_a84dfec17e5c470d240be038c2a6c5c97"><div class="ttname"><a href="#a84dfec17e5c470d240be038c2a6c5c97">getInput</a></div><div class="ttdeci">static void getInput(equ *equation)</div><div class="ttdoc">func which gets data from user</div><div class="ttdef"><b>Definition</b> release.cpp:59</div></div>
+<div class="ttc" id="arelease_8cpp_html_ac4434accca83c4b6afe93b1bf26cd902"><div class="ttname"><a href="#ac4434accca83c4b6afe93b1bf26cd902">printSolutions</a></div><div class="ttdeci">static void printSolutions(const int *numberOfSol, progAnsw *progAnswer)</div><div class="ttdoc">print answers in special format</div><div class="ttdef"><b>Definition</b> release.cpp:149</div></div>
+<div class="ttc" id="astructequ_html"><div class="ttname"><a href="structequ.html">equ</a></div><div class="ttdoc">structure which keeps coefficients of quad equation</div><div class="ttdef"><b>Definition</b> structures.h:5</div></div>
+<div class="ttc" id="astructprog_answ_html"><div class="ttname"><a href="structprog_answ.html">progAnsw</a></div><div class="ttdoc">structure which keeps programm answers</div><div class="ttdef"><b>Definition</b> structures.h:18</div></div>
 </div><!-- fragment --><p>numberOfSol [type int] - get number of solutions from SolveEquation</p>
 <p>equation [type equ <b>&ndash;watch <a class="el" href="structures_8h.html">structures.h</a>&ndash;</b>] - new structure with coefficients</p>
 <p>progAnswer [type <a class="el" href="structprog_answ.html" title="structure which keeps programm answers">progAnsw</a> <b>&ndash;watch <a class="el" href="structures_8h.html">structures.h</a>&ndash;</b>] - new structure with roots from programm </p>
