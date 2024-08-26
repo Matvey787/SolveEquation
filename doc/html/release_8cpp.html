@@ -81,27 +81,31 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6e5c7e74993d3e57a5e2fc31dd7ad607.html">cpp_files</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">C:/Users/admin/Desktop/C programs/SolveEquation/cpp_files/release.cpp File Reference</div></div>
+  <div class="headertitle"><div class="title">release.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;TXLib.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &quot;..\headers\release.h&quot;</code><br />
-<code>#include &quot;..\headers\constants.h&quot;</code><br />
-<code>#include &quot;..\headers\structures.h&quot;</code><br />
-<code>#include &quot;..\headers\SolveEquation.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="release_8h_source.html">..\headers\release.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="constants_8h_source.html">..\headers\constants.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="structures_8h_source.html">..\headers\structures.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_solve_equation_8h_source.html">..\headers\SolveEquation.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a84dfec17e5c470d240be038c2a6c5c97" id="r_a84dfec17e5c470d240be038c2a6c5c97"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84dfec17e5c470d240be038c2a6c5c97">getInput</a> (equ *equation)</td></tr>
+<tr class="memitem:a84dfec17e5c470d240be038c2a6c5c97" id="r_a84dfec17e5c470d240be038c2a6c5c97"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84dfec17e5c470d240be038c2a6c5c97">getInput</a> (<a class="el" href="structequ.html">equ</a> *equation)</td></tr>
 <tr class="memdesc:a84dfec17e5c470d240be038c2a6c5c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">func which gets data from user  <br /></td></tr>
 <tr class="separator:a84dfec17e5c470d240be038c2a6c5c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4434accca83c4b6afe93b1bf26cd902" id="r_ac4434accca83c4b6afe93b1bf26cd902"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4434accca83c4b6afe93b1bf26cd902">printSolutions</a> (const int *numberOfSol, progAnsw *progAnswer)</td></tr>
+<tr class="memitem:ac4434accca83c4b6afe93b1bf26cd902" id="r_ac4434accca83c4b6afe93b1bf26cd902"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4434accca83c4b6afe93b1bf26cd902">printSolutions</a> (const int *numberOfSol, <a class="el" href="structprog_answ.html">progAnsw</a> *progAnswer)</td></tr>
 <tr class="memdesc:ac4434accca83c4b6afe93b1bf26cd902"><td class="mdescLeft">&#160;</td><td class="mdescRight">print answers in special format  <br /></td></tr>
 <tr class="separator:ac4434accca83c4b6afe93b1bf26cd902"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4fa4af9bbcdf25e719917d23bc3a8e3" id="r_ab4fa4af9bbcdf25e719917d23bc3a8e3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4fa4af9bbcdf25e719917d23bc3a8e3">clearInput</a> ()</td></tr>
@@ -215,7 +219,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">static void getInput </td>
           <td>(</td>
-          <td class="paramtype">equ *</td>          <td class="paramname"><span class="paramname"><em>equation</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structequ.html">equ</a> *</td>          <td class="paramname"><span class="paramname"><em>equation</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -258,7 +262,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">progAnsw *</td>          <td class="paramname"><span class="paramname"><em>progAnswer</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structprog_answ.html">progAnsw</a> *</td>          <td class="paramname"><span class="paramname"><em>progAnswer</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -289,12 +293,13 @@ Functions</h2></td></tr>
 <div class="line"><span class="keywordflow">case</span> 2:</div>
 <div class="line">    printf(<span class="stringliteral">&quot;Solution #1:%lg\nSolution #2:%lg\n&quot;</span>, *x1, *x2);</div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="keywordflow">case</span> SS_INF_ROOTS:</div>
+<div class="line"><span class="keywordflow">case</span> <a class="code hl_variable" href="constants_8h.html#a35edd79502e9fd1c58eb07a2ad3f4d0a">SS_INF_ROOTS</a>:</div>
 <div class="line">    printf(<span class="stringliteral">&quot;Infinite number of solutions!&quot;</span>);</div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="keywordflow">default</span>:</div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
 <div class="line">}</div>
+<div class="ttc" id="aconstants_8h_html_a35edd79502e9fd1c58eb07a2ad3f4d0a"><div class="ttname"><a href="constants_8h.html#a35edd79502e9fd1c58eb07a2ad3f4d0a">SS_INF_ROOTS</a></div><div class="ttdeci">const int SS_INF_ROOTS</div><div class="ttdoc">parameter for checking if equation have infinity amount of roots</div><div class="ttdef"><b>Definition</b> constants.h:6</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -322,18 +327,20 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>nothing</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> numberOfSol = 0;</div>
-<div class="line">equ equation;</div>
+<div class="line"><a class="code hl_struct" href="structequ.html">equ</a> equation;</div>
 <div class="line"><a class="code hl_function" href="#a84dfec17e5c470d240be038c2a6c5c97">getInput</a>(&amp;equation);</div>
 <div class="line"> </div>
-<div class="line">progAnsw progAnswer = {0, 0, 0};</div>
+<div class="line"><a class="code hl_struct" href="structprog_answ.html">progAnsw</a> progAnswer = {0, 0, 0};</div>
 <div class="line">numberOfSol = <a class="code hl_function" href="_solve_equation_8cpp.html#aa497bc0c3a2b2169a829f3163f09b328">SolveEquation</a>(&amp;equation, &amp;progAnswer);</div>
 <div class="line"><a class="code hl_function" href="#ac4434accca83c4b6afe93b1bf26cd902">printSolutions</a>(&amp;numberOfSol, &amp;progAnswer);</div>
 <div class="ttc" id="a_solve_equation_8cpp_html_aa497bc0c3a2b2169a829f3163f09b328"><div class="ttname"><a href="_solve_equation_8cpp.html#aa497bc0c3a2b2169a829f3163f09b328">SolveEquation</a></div><div class="ttdeci">int SolveEquation(equ *equation, progAnsw *progAnswer)</div><div class="ttdoc">main call function</div><div class="ttdef"><b>Definition</b> SolveEquation.cpp:32</div></div>
 <div class="ttc" id="arelease_8cpp_html_a84dfec17e5c470d240be038c2a6c5c97"><div class="ttname"><a href="#a84dfec17e5c470d240be038c2a6c5c97">getInput</a></div><div class="ttdeci">static void getInput(equ *equation)</div><div class="ttdoc">func which gets data from user</div><div class="ttdef"><b>Definition</b> release.cpp:55</div></div>
 <div class="ttc" id="arelease_8cpp_html_ac4434accca83c4b6afe93b1bf26cd902"><div class="ttname"><a href="#ac4434accca83c4b6afe93b1bf26cd902">printSolutions</a></div><div class="ttdeci">static void printSolutions(const int *numberOfSol, progAnsw *progAnswer)</div><div class="ttdoc">print answers in special format</div><div class="ttdef"><b>Definition</b> release.cpp:142</div></div>
+<div class="ttc" id="astructequ_html"><div class="ttname"><a href="structequ.html">equ</a></div><div class="ttdoc">structure which keeps coefficients of quad equation</div><div class="ttdef"><b>Definition</b> structures.h:4</div></div>
+<div class="ttc" id="astructprog_answ_html"><div class="ttname"><a href="structprog_answ.html">progAnsw</a></div><div class="ttdoc">structure which keeps programm answers</div><div class="ttdef"><b>Definition</b> structures.h:10</div></div>
 </div><!-- fragment --><p>numberOfSol [type int] - get number of solutions from SolveEquation</p>
-<p>equation [type equ <b>&ndash;watch structures.h&ndash;</b>] - new structure with coefficients</p>
-<p>progAnswer [type progAnsw <b>&ndash;watch structures.h&ndash;</b>] - new structure with roots from programm </p>
+<p>equation [type equ <b>&ndash;watch <a class="el" href="structures_8h.html">structures.h</a>&ndash;</b>] - new structure with coefficients</p>
+<p>progAnswer [type <a class="el" href="structprog_answ.html" title="structure which keeps programm answers">progAnsw</a> <b>&ndash;watch <a class="el" href="structures_8h.html">structures.h</a>&ndash;</b>] - new structure with roots from programm </p>
 
 </div>
 </div>

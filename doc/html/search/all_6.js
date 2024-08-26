@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['needtoswap_0',['needToSwap',['../debug_8cpp.html#a0ccb28be5ece08ca072a905faccbf9cb',1,'debug.cpp']]],
-  ['notlinearequation_1',['notLinearEquation',['../func_types_equation_8cpp.html#a3df4633cc63625d0536274e624f3e6bf',1,'funcTypesEquation.cpp']]]
+  ['getcoeff_0',['getCoeff',['../release_8cpp.html#a4ed030911c5fbc3b5fa3408c568f9fc9',1,'release.cpp']]],
+  ['getinput_1',['getInput',['../release_8cpp.html#a84dfec17e5c470d240be038c2a6c5c97',1,'release.cpp']]]
 ];

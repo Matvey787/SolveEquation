@@ -20,6 +20,10 @@ void mySwap(void* a, void* b, size_t elemMemory);
 
     \return nothing
 
+    equations [type test] - <b>array of different test structures</b><br>
+    progAnswer [type progAnsw] - <b>struct to save prog answers</b><br>
+    testedEquation [type test] - <b>current struct of test</b>
+
     \code
         for (unsigned int i = 0; i < sizeof(equations)/sizeof(*equations); i++)
         {
@@ -33,11 +37,8 @@ void mySwap(void* a, void* b, size_t elemMemory);
         }
      \endcode
 */
-/*! equations [type test] - <b>array of different test structures</b> */
-/*! progAnswer [type progAnsw] - <b>struct to save prog answers</b> */
-/*! testedEquation [type test] - <b>current struct of test</b> */
-void debugFunc(){
 
+void debugFunc(){
     for (unsigned int i = 0; i < sizeof(equations)/sizeof(*equations); i++)
     {
         progAnsw progAnswer = {0, 0, 0};
@@ -51,15 +52,23 @@ void debugFunc(){
 }
 
 /**
-    \brief function which tests programm
+    \brief <b>Function which tests programm.</b>
+
+    \details Function firstly check if programm number of roots is equal to correct number of
+    roots. Then it checks if roots correct of both sides.
+
     \param [in] x1 - first prog root
     \param [in] x2 - second prog root
     \param [in] numberOfRoots -  amount of roots
     \param [in] testedEquation - struct of corect answers
     \param [in] numberOfTest - number of test
+
     \return 1 - if test is corrected 0 - otherwise
+
+    x1Corr [type double] - <b>first correct answer</b><br>
+    x2Corr [type double] - <b>second correct answer</b>
+
     \code
-        for (unsigned int i = 0; i < sizeof(equations)/sizeof(*equations); i++)
         printf("Test \033[43m\033[30m#%d\033[0m ", numberOfTest);
 
         corrAnsw correctAnswers = testedEquation->corrAns;
@@ -90,9 +99,7 @@ void debugFunc(){
         return 0;
      \endcode
 */
-/*! equations [type test] - <b>array of different test structures</b> */
-/*! progAnswer [type progAnsw] - <b>struct to save prog answers</b> */
-/*! testedEquation [type test] - <b>current struct of test</b> */
+
 static int isCorrectAns(double* x1, double* x2, const int numberOfRoots, const test* testedEquation, int numberOfTest){
     printf("Test \033[43m\033[30m#%d\033[0m ", numberOfTest);
 

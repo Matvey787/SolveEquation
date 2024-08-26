@@ -1,3 +1,5 @@
+<img src = "myLogo.jpg"/>
+
 To see documentation:
 1. Go to [main page](https://github.com/Matvey787/SolveEquation)
 2. Download project in [.zip file](https://github.com/Matvey787/SolveEquation/archive/refs/heads/main.zip)

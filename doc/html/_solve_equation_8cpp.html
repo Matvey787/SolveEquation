@@ -81,24 +81,28 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6e5c7e74993d3e57a5e2fc31dd7ad607.html">cpp_files</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">C:/Users/admin/Desktop/C programs/SolveEquation/cpp_files/SolveEquation.cpp File Reference</div></div>
+  <div class="headertitle"><div class="title">SolveEquation.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;TXLib.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &quot;..\headers\structures.h&quot;</code><br />
-<code>#include &quot;..\headers\constants.h&quot;</code><br />
-<code>#include &quot;..\headers\SolveEquation.h&quot;</code><br />
-<code>#include &quot;..\headers\funcTypesEquation.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="structures_8h_source.html">..\headers\structures.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="constants_8h_source.html">..\headers\constants.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_solve_equation_8h_source.html">..\headers\SolveEquation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="func_types_equation_8h_source.html">..\headers\funcTypesEquation.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa497bc0c3a2b2169a829f3163f09b328" id="r_aa497bc0c3a2b2169a829f3163f09b328"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa497bc0c3a2b2169a829f3163f09b328">SolveEquation</a> (equ *equation, progAnsw *progAnswer)</td></tr>
+<tr class="memitem:aa497bc0c3a2b2169a829f3163f09b328" id="r_aa497bc0c3a2b2169a829f3163f09b328"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa497bc0c3a2b2169a829f3163f09b328">SolveEquation</a> (<a class="el" href="structequ.html">equ</a> *equation, <a class="el" href="structprog_answ.html">progAnsw</a> *progAnswer)</td></tr>
 <tr class="memdesc:aa497bc0c3a2b2169a829f3163f09b328"><td class="mdescLeft">&#160;</td><td class="mdescRight">main call function  <br /></td></tr>
 <tr class="separator:aa497bc0c3a2b2169a829f3163f09b328"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -112,12 +116,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int SolveEquation </td>
           <td>(</td>
-          <td class="paramtype">equ *</td>          <td class="paramname"><span class="paramname"><em>equation</em></span>, </td>
+          <td class="paramtype"><a class="el" href="structequ.html">equ</a> *</td>          <td class="paramname"><span class="paramname"><em>equation</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">progAnsw *</td>          <td class="paramname"><span class="paramname"><em>progAnswer</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structprog_answ.html">progAnsw</a> *</td>          <td class="paramname"><span class="paramname"><em>progAnswer</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -138,12 +142,13 @@ Functions</h2></td></tr>
 <div class="line"><span class="keywordtype">double</span> D = equation-&gt;b * equation-&gt;b - 4 * equation-&gt;a * equation-&gt;c;</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//printf(&quot;%lg\n&quot;, D);</span></div>
-<div class="line"><span class="keywordflow">if</span> (fabs(equation-&gt;a) &gt; compareZero) <span class="comment">// is zero func</span></div>
+<div class="line"><span class="keywordflow">if</span> (fabs(equation-&gt;a) &gt; <a class="code hl_variable" href="constants_8h.html#ab2ff0059e7b3d9a6abda112f360d1b56">compareZero</a>) <span class="comment">// is zero func</span></div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="func_types_equation_8cpp.html#a3df4633cc63625d0536274e624f3e6bf">notLinearEquation</a>(&amp;D, equation, progAnswer);</div>
 <div class="line"><span class="keywordflow">else</span></div>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="func_types_equation_8cpp.html#a14cea80dcf4f8a89c45884b2b9b45539">isLinearEquation</a>(equation, progAnswer);</div>
 <div class="line">}</div>
+<div class="ttc" id="aconstants_8h_html_ab2ff0059e7b3d9a6abda112f360d1b56"><div class="ttname"><a href="constants_8h.html#ab2ff0059e7b3d9a6abda112f360d1b56">compareZero</a></div><div class="ttdeci">const double compareZero</div><div class="ttdoc">parameter for checking if double is zero</div><div class="ttdef"><b>Definition</b> constants.h:4</div></div>
 <div class="ttc" id="afunc_types_equation_8cpp_html_a14cea80dcf4f8a89c45884b2b9b45539"><div class="ttname"><a href="func_types_equation_8cpp.html#a14cea80dcf4f8a89c45884b2b9b45539">isLinearEquation</a></div><div class="ttdeci">int isLinearEquation(const equ *equation, progAnsw *progAnswer)</div><div class="ttdoc">same as not linear func but work with if coefficient before x^2 = 0</div><div class="ttdef"><b>Definition</b> funcTypesEquation.cpp:90</div></div>
 <div class="ttc" id="afunc_types_equation_8cpp_html_a3df4633cc63625d0536274e624f3e6bf"><div class="ttname"><a href="func_types_equation_8cpp.html#a3df4633cc63625d0536274e624f3e6bf">notLinearEquation</a></div><div class="ttdeci">int notLinearEquation(const double *D, const equ *equation, progAnsw *progAnswer)</div><div class="ttdoc">function which swap two numbers</div><div class="ttdef"><b>Definition</b> funcTypesEquation.cpp:42</div></div>
 </div><!-- fragment --> </dd></dl>

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['solveequation_0',['SolveEquation',['../_solve_equation_8cpp.html#aa497bc0c3a2b2169a829f3163f09b328',1,'SolveEquation.cpp']]],
-  ['solveequation_2ecpp_1',['SolveEquation.cpp',['../_solve_equation_8cpp.html',1,'']]],
-  ['swap2_2',['swap2',['../debug_8cpp.html#ad4b9bf5324a657fadc2df16fc5fb48a9',1,'debug.cpp']]]
+  ['needtoswap_0',['needToSwap',['../debug_8cpp.html#a0ccb28be5ece08ca072a905faccbf9cb',1,'debug.cpp']]],
+  ['notlinearequation_1',['notLinearEquation',['../func_types_equation_8cpp.html#a3df4633cc63625d0536274e624f3e6bf',1,'notLinearEquation(const double *D, const equ *equation, progAnsw *progAnswer):&#160;funcTypesEquation.cpp'],['../func_types_equation_8h.html#a3df4633cc63625d0536274e624f3e6bf',1,'notLinearEquation(const double *D, const equ *equation, progAnsw *progAnswer):&#160;funcTypesEquation.cpp']]],
+  ['numberofroots_2',['numberOfRoots',['../structprog_answ.html#a58601f1d761a2f3252d08575e2b080c2',1,'progAnsw']]],
+  ['numberofrootscorr_3',['numberOfRootsCorr',['../structcorr_answ.html#af50583352e88856f5fc324a4387121e3',1,'corrAnsw']]]
 ];

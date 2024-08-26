@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['iscorrectans_0',['isCorrectAns',['../debug_8cpp.html#a60dbe3d8632e49420efb046fe30794b1',1,'debug.cpp']]],
-  ['islinearequation_1',['isLinearEquation',['../func_types_equation_8cpp.html#a14cea80dcf4f8a89c45884b2b9b45539',1,'funcTypesEquation.cpp']]]
+  ['equ_0',['equ',['../structequ.html',1,'']]],
+  ['equation_1',['equation',['../structtest.html#a94fe626233366e4832bb983edb640ee5',1,'test']]],
+  ['equations_2',['equations',['../tests_8h.html#a9a585a751592145bb1e7f36503084847',1,'tests.h']]]
 ];
