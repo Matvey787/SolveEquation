@@ -8,17 +8,15 @@ To see documentation:
 5. Open [index.html](https://github.com/Matvey787/SolveEquation/blob/main/cpp_files/doc/html/index.html)
 
 ### Built With
-
-Programs that I used during the implementation of the solution of the quadratic equation.
-
-<a href = "https://code.visualstudio.com/">
-    <img src = "..\jpg_files\vscode_logo.jpg" width = "50" height = "50"/>
+<p>
+Programs that I used during the implementation of the solution of the quadratic equation.</p>
+<a href = "https://code.visualstudio.com/" style="margin-right:60px">
+    <img src = "jpg_files\vscode_logo.jpg" width = "50" height = "50"/>
 </a>
-<a href = "https://www.doxygen.nl/manual/doxywizard_usage.html">
-    <img src = "..\jpg_files\doxygen_logo.jpg" align = "center" width = "50" height = "50">
+<a href = "https://www.doxygen.nl/manual/doxywizard_usage.html" style="margin-right:60px">
+    <img src = "jpg_files\doxygen_logo.jpg" width = "50" height = "50">
 </a>
 <a href = "https://www.codeblocks.org/">
-    <img src = "..\jpg_files\codeblocks_logo.jpg" width = "50" height = "50"/>
+        <img src = "jpg_files\codeblocks_logo.jpg" width = "70" height = "50"/>
 </a>
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
