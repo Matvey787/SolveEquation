@@ -1,4 +1,4 @@
-<p align="center"><img src = "myLogo.jpg"/></p>
+<p align="center"><img src = "jpg_files\myLogo.jpg"/></p>
 
 To see documentation:
 1. Go to [main page](https://github.com/Matvey787/SolveEquation)
