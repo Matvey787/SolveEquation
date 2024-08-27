@@ -10,10 +10,10 @@ To see documentation:
 ### Built With
 <p>
 Programs that I used during the implementation of the solution of the quadratic equation.</p>
-<a href = "https://code.visualstudio.com/" style="margin-right:60px">
+<a href = "https://code.visualstudio.com/">
     <img src = "jpg_files\vscode_logo.jpg" width = "50" height = "50"/>
 </a>
-<a href = "https://www.doxygen.nl/manual/doxywizard_usage.html" style="margin-right:60px">
+<a href = "https://www.doxygen.nl/manual/doxywizard_usage.html">
     <img src = "jpg_files\doxygen_logo.jpg" width = "50" height = "50">
 </a>
 <a href = "https://www.codeblocks.org/">
